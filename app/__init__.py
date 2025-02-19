@@ -15,12 +15,15 @@ def create_app():
     
     @app.route('/templates')
     def templates():
+        site_updated = datetime.now().strftime('%Y-%m-%d')
         with open('data/templates.yaml', 'r') as file:
             templates = yaml.safe_load(file)
-        return render_template('templates.html', templates=templates)
+            
+        return render_template('templates.html', templates=templates, site_updated=site_updated)
     
     @app.route('/resources')
     def resources():
+        site_updated = datetime.now().strftime('%Y-%m-%d')
         # Load the main resources.yaml
         with open('data/resources/resources.yaml', 'r') as file:
             main_yaml = yaml.safe_load(file)
@@ -34,7 +37,14 @@ def create_app():
                 section_data = yaml.safe_load(sec_file)
             resources[section_name] = section_data['items']
 
-        return render_template('resources.html', resources=resources)
+        return render_template('resources.html', resources=resources, site_updated=site_updated)
+    
+    
+    @app.route('/utility')
+    def utility():
+        site_updated = datetime.now().strftime('%Y-%m-%d')
+        
+        return render_template('utility.html', site_updated=site_updated)
 
     return app
 

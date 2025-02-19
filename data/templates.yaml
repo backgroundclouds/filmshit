@@ -4,11 +4,12 @@
 - section: Production Templates
   templates:
     - title: "Call Sheet Template"
-      description: "Standard call sheet for production schedules."
-      author: "Josh Parkhill"
-      date: "2024-02-18"
+      description: "Standard call sheet template"
+      author: "none"
+      date: ""
       file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: "Hard borders. Easy to modify. Sized for page print."
 
     - title: "Budget Breakdown"
       description: "Detailed template for budgeting production costs."

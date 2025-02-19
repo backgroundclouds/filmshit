@@ -7,30 +7,46 @@ Templates | FilmShit
 {% block content %}
 
 
-<div class="text-center mb-4">
-  <h2 class="mb-3">🗂️ Templates Directory</h2>
-  <p class="lead">Browse and download film production templates.</p>
-</div>
-
-
-
-
 
 <!-- allign left -->
-<div class="directory-grid">
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1 class="mb-3"><small>📂</small>Templates</h2>
+      <p class="lead">Selection of commonly used and custom templates for film production</p>
+  </div>
+
   {% for section in templates %}
-  <div class="directory-section mb-5">
-    <h4 class="mb-3">📁 {{ section.section }}</h4>
+  <div class="mb-5 pb-3 border-bottom">
+    <h4 class="mb-3">{{ section.section }}</h4>
     <ul class="list-group">
       {% for template in section.templates %}
-      <li class="list-group-item">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <h5 class="mb-1">{{ template.title }}</h5>
-            <p class="mb-1">{{ template.description }}</p>
-            <small class="text-muted">By {{ template.author }} | {{ template.date }}</small>
-          </div>
-          <a href="{{ template.file_path }}" download>📄 {{ template.file_name }}</a>
+      <li class="list-group-item card-body py-2 d-flex justify-content-between align-items-center min-height-auto">
+        <!-- Left Content -->
+        <div class="d-flex flex-column min-height-auto">
+          <h5 class="mb-1">{{ template.title }}</h5>
+          <p class="mb-2">{{ template.description }}</p>
+          <small class="text-muted d-block mb-2">
+            {{ template.author if template.author else "Unknown" }}
+            {% if template.date %} | {{ template.date }} {% endif %}
+          </small>
+          <!-- Download Link -->
+          <a href="{{ template.file_path }}" download class="text-primary align-bottom mb-0">{{ template.file_name
+            }}</a>
+        </div>
+
+        <!-- Right-Side Content -->
+        <div class="d-flex align-items-center ms-auto px-5 py-1">
+          <!-- Popover Button for Additional Info -->
+          {% if template.additional %}
+          <button type="button" class="btn btn-outline-secondary me-5 px-3 py-0 flex-shrink-0" data-bs-toggle="popover"
+            data-bs-placement="left" data-bs-content="{{ template.additional }}">
+            Notes
+          </button>
+          {% endif %}
+          <div class="gap-5"></div>
+          <div class="gap-5"></div>
+
+
         </div>
       </li>
       {% endfor %}
@@ -38,7 +54,6 @@ Templates | FilmShit
   </div>
   {% endfor %}
 </div>
-
 
 
 

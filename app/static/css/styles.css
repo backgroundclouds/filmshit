@@ -1,38 +1,32 @@
-body {
-    color: rgb(197, 204, 206);
-    background-color: rgb(40, 47, 58);
-}
 
+/* 
 .directory-structure {
     max-width: 900px;
     margin: 0 auto;
     padding: 30px 0;
 }
+*/
 
 .directory-section {
-    border-left: 4px solid #007bff;
+    border-left: 4px solid #18bc9c;;
     padding-left: 15px;
-}
+} 
 
 .directory-grid .list-group-item {
-    background-color: #28303a;
-    color: #c5ccce;
+    /* background-color: #28303a;
+    color: #c5ccce; */
     border: 1px solid #444;
 }
 
 .directory-grid {
-    max-width: 900px;
     margin: 0 auto;
 }
 
-.directory-section {
-    border-left: 5px solid #007bff;
-    padding-left: 15px;
-}
+
 
 .list-group-item {
-    background-color: #344055;
-    color: #e0e0e0;
+    /* background-color: #344055;
+    color: #e0e0e0; */
     border: 1px solid #444;
 }
 
@@ -48,6 +42,39 @@ body {
     white-space: nowrap;
 }
 
+
+
+
+
 .list-group-item:hover {
-    background-color: #3f4b62;
+    color: #fff; /* Text turns white */
+    background-color: #95a5a67f; /* Background becomes secondary */
+    border-color: #95a5a640; /* Border color matches */
+    border-width: 4px;
+}
+
+.list-group-item:hover h5,
+.list-group-item:hover p,
+.list-group-item:hover small,
+.list-group-item:hover a.btn,
+.list-group-item:hover a {
+    color: #fff !important; /* All text inside turns white */
+}
+
+.list-group-item:hover a.text-primary {
+    color: #ebebeb !important; /* Light gray instead of blue for contrast */
+}
+
+.list-group-item:hover small.text-muted {
+    color: #d4d4d4 !important; /* Lightened muted text */
+}
+
+.list-group-item {
+    transition: all 0.2s ease-in-out;
+}
+
+.overview-section {
+    border: 1px solid #ccc; /* Subtle border */
+    padding: 16px;
+    text-align: left;
 }
