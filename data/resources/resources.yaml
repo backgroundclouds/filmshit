@@ -1,0 +1,11 @@
+# resources.yaml - Defines the sections and corresponding item files
+
+sections:
+  - name: "Learning Resources"
+    file: "learning_resources.yaml"
+
+  - name: "Industry Resources"
+    file: "industry_resources.yaml"
+
+  - name: "Software Tools"
+    file: "software_tools.yaml"

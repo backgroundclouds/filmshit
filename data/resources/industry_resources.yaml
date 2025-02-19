@@ -1,0 +1,18 @@
+items:
+  - title: "AICP"
+    description: "The Association of Independent Commercial Producers."
+    url: "https://www.aicp.com/"
+    author: "AICP"
+    date: "2023-11-10"
+
+  - title: "AdAge"
+    description: "News and analysis on the advertising industry."
+    url: "https://adage.com/"
+    author: "AdAge"
+    date: "2024-01-08"
+
+  - title: "ShootOnline"
+    description: "Production and advertising industry news."
+    url: "https://www.shootonline.com/"
+    author: "ShootOnline"
+    date: "2024-02-03"

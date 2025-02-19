@@ -1,0 +1,53 @@
+body {
+    color: rgb(197, 204, 206);
+    background-color: rgb(40, 47, 58);
+}
+
+.directory-structure {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.directory-section {
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+}
+
+.directory-grid .list-group-item {
+    background-color: #28303a;
+    color: #c5ccce;
+    border: 1px solid #444;
+}
+
+.directory-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.directory-section {
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+}
+
+.list-group-item {
+    background-color: #344055;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.list-group-item h5 {
+    margin: 0;
+}
+
+.list-group-item p {
+    margin: 0 0 5px;
+}
+
+.list-group-item a.btn {
+    white-space: nowrap;
+}
+
+.list-group-item:hover {
+    background-color: #3f4b62;
+}
