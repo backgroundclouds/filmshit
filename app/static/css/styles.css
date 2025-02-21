@@ -25,9 +25,9 @@
 
 
 .list-group-item {
-    /* background-color: #344055;
-    color: #e0e0e0; */
-    border: 1px solid #444;
+    color: var(--bs-emphasis-color);
+    background-color: var(--bs-body-bg);
+    border: 1px solid #444; /* Keeping your existing border color */
 }
 
 .list-group-item h5 {
@@ -43,14 +43,11 @@
 }
 
 
-
-
-
 .list-group-item:hover {
-    color: #fff; /* Text turns white */
-    background-color: #95a5a67f; /* Background becomes secondary */
-    border-color: #95a5a640; /* Border color matches */
-    border-width: 4px;
+    color: var(--bs-emphasis-color);
+    background-color: rgba(var(--bs-emphasis-color-rgb), 0.075); /* Matches template-card hover */
+    border-color: #00000040; /* Keeping your existing hover border */
+    border-width: 2px;
 }
 
 .list-group-item:hover h5,
@@ -58,17 +55,18 @@
 .list-group-item:hover small,
 .list-group-item:hover a.btn,
 .list-group-item:hover a {
-    color: #fff !important; /* All text inside turns white */
+    color: var(--bs-emphasis-color) !important; 
 }
-
 .list-group-item:hover a.text-primary {
-    color: #ebebeb !important; /* Light gray instead of blue for contrast */
+    color: var(--bs-emphasis-color) !important; 
 }
 
+/* Make sure muted text remains legible */
 .list-group-item:hover small.text-muted {
-    color: #d4d4d4 !important; /* Lightened muted text */
+    color: var(--bs-emphasis-color) !important; 
 }
 
+/* Keep transition effects */
 .list-group-item {
     transition: all 0.2s ease-in-out;
 }
@@ -89,3 +87,24 @@
 .custom-list {
     list-style-type: circle;  /* Hollow bullet ○ */
   }
+
+  .template-card {
+    --template-card-color: var(--bs-emphasis-color);  /* Default text color */
+    --template-card-bg: var(--bs-body-bg);           /* Default background */
+    --template-card-border-color: var(--bs-border-color); /* Default border */
+    --template-card-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075); /* Hover effect */
+
+    color: var(--template-card-color);
+    background-color: var(--template-card-bg);
+    border: 1px solid var(--template-card-border-color);
+    padding: 1rem;
+    border-radius: 0.5rem; /* Optional rounded corners */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.template-card:hover {
+    background-color: var(--template-card-hover-bg);
+}
+
+
