@@ -53,3 +53,171 @@ touch app/static/files/budget_breakdown.txt app/static/files/shot_list_template.
 
 
 ```
+
+
+
+###copy paste backup of templates.html
+
+
+```html
+<!-- allign left -->
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1 class="mb-3"><small>📂</small>Templates</h2>
+      <p class="lead">Selection of commonly used and custom templates for film production</p>
+  </div>
+
+  {% for section in templates %}
+  <div class="mb-5 pb-3 border-bottom">
+    <h4 class="mb-3">{{ section.section }}</h4>
+    <ul class="list-group">
+      {% for template in section.templates %}
+      <li class="list-group-item card-body py-2 d-flex justify-content-between align-items-center min-height-auto">
+        <!-- Left Content -->
+        <div class="d-flex flex-column min-height-auto">
+          <h5 class="mb-1">{{ template.title }}</h5>
+          <p class="mb-2">{{ template.description }}</p>
+          <small class="text-muted d-block mb-2">
+            {{ template.author if template.author else "Unknown" }}
+            {% if template.date %} | {{ template.date }} {% endif %}
+          </small>
+          <!-- Download Link -->
+          <a href="{{ template.file_path }}" download class="text-primary align-bottom mb-0">{{ template.file_name
+            }}</a>
+        </div>
+
+        <!-- Right-Side Content -->
+        <div class="d-flex align-items-center ms-auto px-5 py-1">
+          <!-- Popover Button for Additional Info -->
+          {% if template.additional %}
+          <button type="button" class="btn btn-outline-secondary me-5 px-3 py-0 flex-shrink-0" data-bs-toggle="popover"
+            data-bs-placement="left" data-bs-content="{{ template.additional }}">
+            Notes
+          </button>
+          {% endif %}
+          <div class="gap-5"></div>
+          <div class="gap-5"></div>
+
+
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+```
+
+
+### resources.html backup
+
+{% extends 'base.html' %}
+
+{% block title %}
+Resources | FilmShit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center mb-4">
+  <h1 class="mb-3">Resources</h1>
+  <p class="lead">Reference material & tools</p>
+</div>
+
+
+
+<h2 class="text-center">Listing</h2>
+<div class="directory-grid">
+  {% for section in resources %}
+  <div class="directory-section mb-5 pb-3 border-bottom">
+    <h4 class="mb-3">📁 {{ section.section }}</h4>
+    <ul class="list-group">
+      {% for item in section.items %}
+      <li class="list-group-item card-body py-2 d-flex justify-content-between align-items-center min-height-auto">
+        <div class="d-flex flex-column min-height-auto">
+          <h5 class="mb-1">{{ item.title }}</h5>
+          <p class="mb-1">{{ item.description }}</p>
+          <small class="text-muted d-block mb-2">{{ item.author }} | {{ item.date }}</small>
+          {{ item.author }} | {{ item.date }}</small>
+        </div>
+        <div class="d-flex align-items-center ms-auto px-5 py-1">
+          <a href="{{ item.url }}" class="btn btn-sm btn-outline-info" target="_blank" rel="noopener noreferrer">🌐 {{
+            item.url }}</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+
+### COPY PASTE AGAIN
+
+
+<h2 class="text-center">Listing</h2>
+<div class="directory-grid">
+  {% for category in resources %}
+  <div class="directory-section mb-5 pb-3 border-bottom">
+    <h3 class="mb-3">📁 {{ category.category }}</h3>
+    <ul class="list-group">
+      {% for entry in category.entries %}
+      <li class="list-group-item card-body py-2 d-flex justify-content-between align-items-center min-height-auto">
+        <div class="d-flex flex-column">
+          <div class="d-flex flex-row align-items-center">
+            <div> <small class="text-muted d-block ms-3">{{ entry.item_source_author}}:</small></div>
+            <div class="ms-3">{{ entry.item_name }} </div>
+            <div class="ms-3"> <a href="{{ entry.item_link }}" class="btn btn-sm btn-outline-info" target="_blank"
+                rel="noopener noreferrer">
+                {{ entry.item_link }}
+              </a></div>
+
+
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+
+####
+
+
+<h2 class="text-center">Listing</h2>
+<div class="directory-grid">
+  {% for category in resources %}
+  <div class="directory-section mb-5 pb-3 border-bottom">
+    <h3 class="mb-3">📁 {{ category.category }}</h3>
+    <ul class="list-group">
+      {% for entry in category.entries %}
+      <div class="bs-component">
+        <div class="card border-light py-3">
+          <li class="list-group-item card-body d-flex justify-content-between align-items-center">
+
+            <div class="d-flex flex-column">
+              <div class="d-flex flex-row align-items-center ">
+                <div class="ms-3"> <small class="text-muted d-block ">{{ entry.item_source_author}}:</small></div>
+                <div class="ms-3">{{ entry.item_name }} </div>
+                <div class="ms-3"> <a href="{{ entry.item_link }}" class="btn btn-sm btn-outline-info" target="_blank"
+                    rel="noopener noreferrer">
+                    {{ entry.item_link }}
+                  </a></div>
+
+              </div>
+
+          </li>
+        </div>
+        {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

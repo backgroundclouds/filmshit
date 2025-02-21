@@ -78,3 +78,14 @@
     padding: 16px;
     text-align: left;
 }
+
+.accordion-body {
+    background-color: var(--bs-light); /* Adjust this if needed */
+    color: var(--bs-dark); /* Ensures readability */
+    padding: 1rem;
+    border-top: 1px solid var(--bs-border-color);
+}
+
+.custom-list {
+    list-style-type: circle;  /* Hollow bullet ○ */
+  }

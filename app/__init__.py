@@ -21,21 +21,30 @@ def create_app():
             
         return render_template('templates.html', templates=templates, site_updated=site_updated)
     
+    # @app.route('/resources')
+    # def resources():
+    #     site_updated = datetime.now().strftime('%Y-%m-%d')
+    #     # Load the main resources.yaml
+    #     with open('data/resources.yaml', 'r') as file:
+    #         resources = yaml.safe_load(file)
+
+    #     return render_template('resources.html', resources=resources, site_updated=site_updated)
+    
     @app.route('/resources')
     def resources():
         site_updated = datetime.now().strftime('%Y-%m-%d')
-        # Load the main resources.yaml
-        with open('data/resources/resources.yaml', 'r') as file:
-            main_yaml = yaml.safe_load(file)
 
-        # Aggregate items from all section files
-        resources = {}
-        for section in main_yaml['sections']:
-            section_name = section['name']
-            file_path = os.path.join('data/resources', section['file'])
-            with open(file_path, 'r') as sec_file:
-                section_data = yaml.safe_load(sec_file)
-            resources[section_name] = section_data['items']
+        # Load YAML file
+        with open('data/resources.yaml', 'r') as file:
+            resources = yaml.safe_load(file)
+
+        print("DEBUG: Resources YAML Loaded ->", resources)  # Add this
+
+        # Ensure all categories contain a list of items
+        for category in resources:
+            if not isinstance(category.get("items", []), list):
+                print(f"ERROR: 'items' in category {category.get('category')} is not a list!")
+                category["items"] = []  # Set a default empty list to avoid crashes
 
         return render_template('resources.html', resources=resources, site_updated=site_updated)
     

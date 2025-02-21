@@ -5,11 +5,16 @@
   templates:
     - title: "Call Sheet Template"
       description: "Standard call sheet template"
-      author: "none"
+      author: ""
       date: ""
       file_path: "/app/static/files/call_sheet_template.txt"
       file_name: "cs_job.txt"
-      additional: "Hard borders. Easy to modify. Sized for page print."
+      additional: "true"
+      details: "Hard borders. Easy to modify. Sized for page print."
+      instructions_path: "/app/static/files/cs_instructions.txt"
+      instructions_name: "cs_instructions.txt"
+
+
 
     - title: "Budget Breakdown"
       description: "Detailed template for budgeting production costs."
@@ -17,13 +22,19 @@
       date: "2024-02-10"
       file_path: "/app/static/files/budget_breakdown.txt"
       file_name: "call_sheet_template.txt"
+      additional: ""
+      details: ""
+      instructions: ""
 
     - title: "Shot List Template"
       description: "Pre-formatted shot list for planning scenes."
-      author: "John Smith"
+      author: ""
       date: "2024-01-25"
       file_path: "/app/static/files/shot_list_template.docx"
       file_name: "call_sheet_template.txt"
+      additional: ""
+      details: ""
+      instructions: ""
 
 # Section 2: Client Documentation
 - section: Client Documentation
@@ -34,6 +45,9 @@
       date: "2023-12-05"
       file_path: "/app/static/files/client_brief_template.docx"
       file_name: "call_sheet_template.txt"
+      additional: ""
+      details: ""
+      instructions: ""      
 
     - title: "Project Proposal"
       description: "Standard proposal template for pitching projects."
@@ -41,6 +55,9 @@
       date: "2023-11-20"
       file_path: "/app/static/files/project_proposal_template.txt"
       file_name: "call_sheet_template.txt"
+      additional: ""
+      details: ""
+      instructions: ""
 
 # Section 3: Miscellaneous
 - section: Miscellaneous Templates
@@ -51,6 +68,9 @@
       date: "2024-02-01"
       file_path: "/app/static/files/crew_contact_list.txt"
       file_name: "call_sheet_template.txt"
+      additional: ""
+      details: ""
+      instructions: ""
 
     - title: "Release Form"
       description: "Standard form for obtaining participant releases."
@@ -58,3 +78,6 @@
       date: "2024-02-15"
       file_path: "/app/static/files/release_form_template.txt"
       file_name: "call_sheet_template.txt"
+      additional: ""
+      details: ""
+      instructions: ""
