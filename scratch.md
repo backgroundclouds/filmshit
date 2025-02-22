@@ -221,3 +221,235 @@ Resources | FilmShit
 </div>
 
 {% endblock %}
+
+
+### resources.yaml backup
+
+```yaml
+- category: Software Tools
+  entries:
+    - item_source_author: "Hot Bricks"
+      item_name: "Hot Budget"
+      item_link: "https://hotbudget.com/download/"
+
+    - item_source_author: "Hot Bricks"
+      item_name: "Hot Budget Manual"
+      item_link: "https://downloads.hotbudget.com/HotBudget_v3.0_UserGuide.pdf"
+
+    - item_source_author: "Revolution Payroll"
+      item_name: "True Budget"
+      item_link: "https://truebudget.io/"
+
+    - item_source_author: "Revolution Payroll"
+      item_name: "True Budget Manual"
+      item_link: "https://www.truebudget.io/assets/website/document/TrueBudget_UserGuide-v1.4.pdf"
+
+    - item_source_author: "Media Services"
+      item_name: "Showbiz Budgeting"
+      item_link: "https://www.mediaservices.com/showbiz-software/upgrade-showbiz-budgeting/"
+
+    - item_source_author: "Media Services"
+      item_name: "Showbiz Budgeting Tutorials"
+      item_link: "https://www.mediaservices.com/showbiz-software/upgrade-showbiz-budgeting/"
+
+    - item_source_author: "Actual"
+      item_name: "GetActual.io"
+      item_link: "https://getactual.io"
+
+    - item_source_author: "Saturation"
+      item_name: "Saturation.io"
+      item_link: "https://saturation.io/"
+      
+    - item_source_author: "RogueWave"
+      item_name: "Rogue Budget (beta)"
+      item_link: "https://roguewave.tv/roguebudget/"
+
+
+- category: Bidding Guidelines
+  entries:
+    - item_source_author: "AICP"
+      item_name: "National Bidding Guidelines"
+      item_link: "https://aicp.com/assets/editor/AICP_National_Live_Action_Guidelines_April2020_FINAL.pdf"
+
+    - item_source_author: "AICP"
+      item_name: "Best Practices when Bidding (memo)"
+      item_link: "https://aicp.com/assets/editor/AICP_BiddingGuidelines_BestPractices_June2017.pdf"
+
+
+- category: Actualization Guidelines
+  entries:
+    - item_source_author: "Media Services"
+      item_name: "Labor Guide (web)"
+      item_link: "https://laborguide.mediaservices.com/labor-guide/show-all/"
+
+    - item_source_author: "Media Services"
+      item_name: "2025 Labor Guidelines (pdf)"
+      item_link: "https://4517874.fs1.hubspotusercontent-na1.net/hubfs/4517874/Labor%20Guide/CommercialGuide_011025.pdf?hsCtaAttrib=164499129412"
+
+
+- category: Digital Payroll Services
+  entries:
+    - item_source_author: "Wrapbook"
+      item_name: "Wrapbook"
+      item_link: "https://wrapbook.com"
+
+    - item_source_author: "Greenslate"
+      item_name: "Greenslate"
+      item_link: "https://greenslate.com/"
+
+
+- category: Antiquated Payroll Services
+  entries:
+    - item_source_author: "TEAM Companies"
+      item_name: "CAPS, Media Services Payroll"
+      item_link: "https://www.capspayroll.com/contact/"
+
+    - item_source_author: "Entertainment Partners"
+      item_name: "EP Payroll"
+      item_link: "https://www.ep.com/"
+
+    - item_source_author: "Revolution Entertainment Services"
+      item_name: "Revolution Payroll "
+      item_link: "https://revolutiones.com/"
+
+    - item_source_author: "Extreme Reach Payroll"
+      item_name: "Extreme Reach Payroll"
+      item_link: "https://www.xr.global/solutions/production-studios"
+
+
+
+- category: Digital Communities
+  entries:
+    - item_source_author: "Variable"
+      item_name: "Variable: a filmmaker wellness community"
+      item_link: "https://wearevariable.com/"
+
+    - item_source_author: "Reddit"
+      item_name: "r/FilmTvBudgeting"
+      item_link: "https://www.reddit.com/r/FilmTVBudgeting/"
+
+    - item_source_author: "Fishbowl"
+      item_name: "bowl/Production"
+      item_link: "https://www.fishbowlapp.com/bowl/production"
+
+    - item_source_author: "CoPros"
+      item_name: "Line Producer, Production Manager network (invite only)"
+      item_link: null
+
+- category: Content
+- category: Podcast
+  entries:
+    - item_source_author: "Jordan Brady"
+      item_name: "Respect The Process"
+      item_link: "https://jordanbrady.com/respect-the-process/"
+
+- category: Blog
+  entries:
+    - item_source_author: "Josh Parkhill"
+      item_name: "Frame By Brand"
+      item_link: "https://framebybrand.substack.com/"
+
+```
+
+### resources.html for loop backup
+
+```html
+<div class="text-center mb-4">
+  <h1 class="mb-3">Resources</h1>
+  <p class="lead">Reference material & tools</p>
+</div>
+
+
+
+<h2 class="text-center">Listing</h2>
+<div class="directory-grid">
+  {% for category in resources %}
+  <div class="directory-section mb-5 pb-3 border-bottom">
+    <h3 class="mb-3">📁 {{ category.category }}</h3>
+    <ul class="list-group">
+      {% for entry in category.entries %}
+      <li class="list-group-item card border-light py-2">
+        <!-- <div class="card border-light py-3"> -->
+        <div class="card-body d-flex justify-content-between align-items-center">
+
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row align-items-center">
+              <div class="ms-3">
+                <small class="text-muted d-block">{{ entry.item_source_author }}:</small>
+              </div>
+              <div class="ms-3">{{ entry.item_name }}</div>
+              <div class="ms-3">
+                <a href="{{ entry.item_link }}" class="btn btn-sm btn-outline-info" target="_blank"
+                  rel="noopener noreferrer">
+                  {{ entry.item_link }}
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- </div> -->
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+```
+
+
+### resources.html seperated by group name
+
+```html
+{% extends 'base.html' %}
+
+{% block title %}
+Resources | FilmShit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center mb-4">
+  <h1 class="mb-3">Resources</h1>
+  <p class="lead">Reference material & tools</p>
+</div>
+
+<div class="directory-grid">
+  {% for category in resources %}
+  <div class="directory-section mb-5 pb-3 border-bottom">
+    <h3 class="mb-3">📁 {{ category.category }}</h3>
+
+    {% for group in category.groups %}
+    <div class="group-section mb-4">
+      <h5 class="mb-2">{{ group.group_name }}</h5>
+      <ul class="list-group">
+        {% for entry in group.entries %}
+        <li class="list-group-item card border-light py-2">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column">
+              <div class="d-flex flex-row align-items-center">
+                <div class="ms-3">{{ entry.item_name }}</div>
+                <div class="ms-3">
+                  <a href="{{ entry.item_link }}" class="btn btn-sm btn-outline-info" target="_blank"
+                    rel="noopener noreferrer">
+                    {{ entry.item_link }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+```

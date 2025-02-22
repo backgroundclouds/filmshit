@@ -1,22 +1,225 @@
-
 - category: Software Tools
-  entries:
-    - item_source_author: "Hot Bricks"
-      item_name: "Hot Budget"
-      item_link: "https://hotbudget.com/download/"
+  groups:
+    - group_name: "Hot Bricks"
+      entries:
+        - item_name: "Hot Budget"
+          item_link: "https://hotbudget.com/download/"
+          tags:
+            - tag: "Excel"
+              tag_style: "tag-success"
 
-    - item_source_author: "Hot Bricks"
-      item_name: "Hot Budget Manual"
-      item_link: "https://downloads.hotbudget.com/HotBudget_v3.0_UserGuide.pdf"
+        - item_name: "Hot Budget Manual"
+          item_link: "https://downloads.hotbudget.com/HotBudget_v3.0_UserGuide.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+    - group_name: "Revolution Payroll"
+      entries:
+        - item_name: "True Budget"
+          item_link: "https://truebudget.io/"
+          tags:
+            - tag: "Excel"
+              tag_style: "tag-success"
+
+        - item_name: "True Budget Manual"
+          item_link: "https://www.truebudget.io/assets/website/document/TrueBudget_UserGuide-v1.4.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+    - group_name: "Media Services"
+      entries:
+        - item_name: "Showbiz Budgeting"
+          item_link: "https://www.mediaservices.com/showbiz-software/upgrade-showbiz-budgeting/"
+          tags:
+            - tag: "Application"
+              tag_style: "bg-primary"
+
+        - item_name: "Showbiz Budgeting Tutorials"
+          item_link: "https://www.mediaservices.com/showbiz-software/upgrade-showbiz-budgeting/"
+          tags:
+            - tag: "Videos"
+              tag_style: "tag-info"
+
+    - group_name: "Actual"
+      entries:
+        - item_name: "GetActual.io"
+          item_link: "https://getactual.io"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+    - group_name: "Saturation"
+      entries:
+        - item_name: "Saturation.io"
+          item_link: "https://saturation.io/"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+    - group_name: "RogueWave"
+      entries:
+        - item_name: "Rogue Budget"
+          item_link: "https://roguewave.tv/roguebudget/"
+          tags:
+            - tag: "App (beta)"
+              tag_style: "tag-warning"
 
 - category: Bidding Guidelines
-  entries:
-    - item_source_author: "AICP"
-      item_name: "Commercial Bidding Guidelines"
-      item_link: "https://aicp.com/assets/editor/National_Live_Action_Guidelines_3_28_14.pdf"
+  groups:
+    - group_name: "AICP"
+      entries:
+        - item_name: "National Bidding Guidelines"
+          item_link: "https://aicp.com/assets/editor/AICP_National_Live_Action_Guidelines_April2020_FINAL.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
 
-- category: Payroll Resources
-  entries:
-    - item_source_author: "Media Services Payroll"
-      item_name: "Showbiz Commercial Labor Guide"
-      item_link: "https://www.dropbox.com/scl/fi/xzkktergzck609irug0kh/CommercialGuide_062123_.pdf?rlkey=vk7eqoefxt4etgmcp51xi6645&dl=0"
+        - item_name: "Best Practices when Bidding (memo)"
+          item_link: "https://aicp.com/assets/editor/AICP_BiddingGuidelines_BestPractices_June2017.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+- category: Actualization Guidelines
+  groups:
+    - group_name: "Media Services"
+      entries:
+        - item_name: "Labor Guidelines"
+          item_link: "https://laborguide.mediaservices.com/labor-guide/show-all/"
+          tags:
+            - tag: "Web"
+              tag_style: "tag-info"
+
+        - item_name: "2025 Labor Guidelines (pdf)"
+          item_link: "https://4517874.fs1.hubspotusercontent-na1.net/hubfs/4517874/Labor%20Guide/CommercialGuide_011025.pdf?hsCtaAttrib=164499129412"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+
+- category: Digital Payroll
+  groups:
+    - group_name: "Wrapbook"
+      entries:
+        - item_name: "Wrapbook"
+          item_link: "https://wrapbook.com"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+
+    - group_name: "Greenslate"
+      entries:          
+        - item_name: "Greenslate"
+          item_link: "https://greenslate.com/"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+- category: Antiquated Payroll Services
+  groups:
+    - group_name: "TEAM"
+      entries:
+        - item_name: "CAPS, Media Services Payroll"
+          item_link: "https://www.capspayroll.com/contact/"
+          tags:
+            - tag: "Paper"
+              tag_style: "bg-warning"
+            - tag: "Digital PDF"
+              tag_style: "tag-danger"
+
+    - group_name: "Entertainment Partners"
+      entries:
+        - item_name: "EP Payroll"
+          item_link: "https://www.ep.com/"
+          tags:
+            - tag: "Paper"
+              tag_style: "bg-warning"
+
+    - group_name: "Revolution Entertainment Services"
+      entries:
+        - item_name: "Revolution Payroll"
+          item_link: "https://revolutiones.com/"
+          tags:
+            - tag: "Paper"
+              tag_style: "bg-warning"
+
+    - group_name: "Extreme Reach"
+      entries:
+        - item_name: "Extreme Reach Payroll"
+          item_link: "https://www.xr.global/solutions/production-studios"
+          tags:
+            - tag: "Paper"
+              tag_style: "bg-warning"
+
+- category: Digital Communities
+  groups:
+    - group_name: "Variable"
+      entries:
+        - item_name: "Variable: a filmmaker wellness community"
+          item_link: "https://wearevariable.com/"
+          tags:
+            - tag: "Events"
+              tag_style: "bg-primary"
+            - tag: "Discussions"
+              tag_style: "bg-primary"
+            - tag: "Zooms"
+              tag_style: "bg-primary"
+              
+
+
+    - group_name: "Reddit"
+      entries:
+        - item_name: "r/FilmTvBudgeting"
+          item_link: "https://www.reddit.com/r/FilmTVBudgeting/"
+          tags:
+            - tag: "Social Media"
+              tag_style: "bg-secondary"
+
+    - group_name: "Fishbowl"
+      entries:
+        - item_name: "bowl/Production"
+          item_link: "https://www.fishbowlapp.com/bowl/production"
+          tags:
+            - tag: "Social Media"
+              tag_style: "bg-secondary"
+
+    - group_name: "CoPros"
+      entries:
+        - item_name: "Private e-mail group"
+          item_link: null
+          tags:
+            - tag: "invite-only"
+              tag_style: "tag-danger"
+
+    - group_name: "Art Cube Nation"
+      entries:
+        - item_name: "Art Department Community"
+          item_link: "https://artcubenation.com/"
+          tags:
+            - tag: "Email-Group"
+              tag_style: "bg-secondary"
+            - tag: "Web Platform"
+              tag_style: "bg-info"
+            - tag: "Sourcing"
+              tag_style: "bg-info"
+
+- category: Content
+  groups:
+    - group_name: "Jordan Brady"
+      entries:
+        - item_name: "Respect The Process"
+          item_link: "https://jordanbrady.com/respect-the-process/"
+          tags:
+            - tag: "Podcast"
+              tag_style: "tag-info"
+
+    - group_name: "Josh Parkhill"
+      entries:
+        - item_name: "Frame By Brand"
+          item_link: "https://framebybrand.substack.com/"
+          tags:
+            - tag: "Blog"
+              tag_style: "tag-info"

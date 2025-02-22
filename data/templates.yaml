@@ -13,5 +13,106 @@
       details: "Hard borders. Easy to modify. Sized for page print."
       instructions_path: "/app/static/files/cs_instructions.txt"
       instructions_name: "cs_instructions.txt"
+    
+    - title: "Music Video Template"
+      description: ""
+      author: ""
+      date: ""
+      file_path: "/app/static/files/call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: ""
+      details: ""
+      instructions_path: "/app/static/files/cs_instructions.txt"
+      instructions_name: "cs_instructions.txt"    
+
+- section: Budgets
+  templates:
+    - title: "Point Zero"
+      description: " "
+      author: "Jay Wakefield"
+      date: "very dated"
+      file_path: "/app/static/files/call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: ""
+      details: ""
+      instructions_path: ""
+      instructions_name: ""
+    
+    - title: "AICP Bid Form"
+      description: ""
+      author: "AICP"
+      date: ""
+      file_path: "/app/static/files/call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: "true"
+      details: "Excel Macros"
+      instructions_path: ""
+      instructions_name: ""
+
+    - title: "AICP Bid Form (Google Sheets)"
+      description: "AICP Bid Form converted to live Google Sheet"
+      author: "AICP // Josh Parkhill"
+      date: ""
+      file_path: "https://google.com"
+      file_name: "cs_job.txt"
+      additional: ""
+      details: ""
+      instructions_path: "/app/static/files/cs_instructions.txt"
+      instructions_name: "cs_instructions.txt"
+
+- section: Actualization
+  templates:
+    - title: "Hourly Cheat Sheet"
+      description: "Payroll to Dayrate cheat sheet"
+      author: "Josh Parkhill"
+      date: ""
+      file_path: "/app/static/files/call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: ""
+      details: ""
+      instructions_path: ""
+      instructions_name: ""
+    
+    - title: "PO Book_PO Log Duet"
+      description: "Custom PO Book. Works well with PO Book, PO Log workflow"
+      author: "Josh Parkhill"
+      date: ""
+      file_path: "/app/static/files/call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: ""
+      details: ""
+      instructions_path: ""
+      instructions_name: ""
+
+
+
+- section: PC Templates
+  templates:
+    - title: "PC Template"
+      description: "Standard Commercial PC Template. No Macros. .xls"
+      author: ""
+      date: "circa 2014"
+      file_path: "/app/static/files/call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: ""
+      details: ""
+      instructions_path: ""
+      instructions_name: ""
+
+    - title: "PC Template (Improved)"
+      description: "PC Template w/ improved functionality. Macros .xlsm."
+      author: ""
+      date: "circa 2014"
+      file_path: "/app/static/files/call_sheet_template.txt"
+      file_name: "cs_job.txt"
+      additional: "true"
+      details: "-additional details-"
+      instructions_path: "/app/static/files/cs_instructions.txt"
+      instructions_name: "cs_instructions.txt"    
+
+
+  
+
+
 
 

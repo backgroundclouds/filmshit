@@ -107,4 +107,148 @@
     background-color: var(--template-card-hover-bg);
 }
 
+/* If you want a more bubble-like shape */
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+    height: 2rem;
 
+}
+
+
+.avatar-text {
+    /* display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    */
+    display: inline-block;
+    /*
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; */
+    background: #000;
+    color: #fff;
+    border-radius: 2rem; /* Makes it pill-shaped */
+    text-align: center; /* Ensures text is centered */
+    white-space: nowrap; /* Prevents it from wrapping */
+    min-width: 80px; /* Ensures it has some width even with short names */
+
+}
+
+.avatar-text {
+     /* Prevents it from stretching weirdly */
+    background: #222; /* Dark but not pure black */
+    color: #fff; /* White text */
+    padding: 6px 12px; /* Adds space inside */
+    font-size: 0.85rem; /* Makes text smaller */
+    border-radius: 1.5rem; /* More rounded */
+    text-align: center; /* Ensures text is centered */
+    white-space: nowrap; /* Prevents it from wrapping */
+    min-width: 80px; /* Ensures it has some width even with short names */
+}
+
+.avatar-container {
+    width: 120px; /* Adjust width to match the longest avatar */
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* .avatar {
+    width: 5rem;
+    height: 5rem;
+} */
+/* .rounded-3 {
+    border-radius: 0.5rem!important;
+} */
+
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.resource-card {
+    --bs-card-spacer-y: 0.5rem;
+}
+
+/* Success Tag */
+.tag-success {
+    /* --bs-success-text-emphasis: #0a4b3e; */
+    --bs-list-group-color: var(--bs-success-text-emphasis);
+    --bs-list-group-bg: var(--bs-success-bg-subtle);
+    --bs-list-group-border-color: var(--bs-success-border-subtle);
+    /* --bs-success-bg-subtle: #d1f2eb; */
+    color: var(--bs-success-text-emphasis);
+    background-color: var(--bs-success-bg-subtle);
+    border: 1px solid var(--bs-success-border-subtle);
+}
+
+/* Warning Tag */
+.tag-warning {
+    --bs-list-group-color: var(--bs-warning-text-emphasis);
+    --bs-list-group-bg: var(--bs-warning-bg-subtle);
+    --bs-list-group-border-color: var(--bs-warning-border-subtle);
+    color: var(--bs-warning-text-emphasis);
+    background-color: var(--bs-warning-bg-subtle);
+    border: 1px solid var(--bs-warning-border-subtle);
+}
+
+/* Info Tag */
+.tag-info {
+    --bs-list-group-color: var(--bs-info-text-emphasis);
+    --bs-list-group-bg: var(--bs-info-bg-subtle);
+    --bs-list-group-border-color: var(--bs-info-border-subtle);
+    color: var(--bs-info-text-emphasis);
+    background-color: var(--bs-info-bg-subtle);
+    border: 1px solid var(--bs-info-border-subtle);
+}
+
+.tag-light {
+    --bs-list-group-color: var(--bs-light-text-emphasis);
+    --bs-list-group-bg: var(--bs-light-bg-subtle);
+    --bs-list-group-border-color: var(--bs-light-border-subtle);
+    color: var(--bs-light-text-emphasis);
+    background-color: var(--bs-light-bg-subtle);
+    border: 1px solid var(--bs-light-border-subtle);
+}
+
+.tag-dark {
+    --bs-list-group-color: var(--bs-dark-text-emphasis);
+    --bs-list-group-bg: var(--bs-dark-bg-subtle);
+    --bs-list-group-border-color: var(--bs-dark-border-subtle);
+    color: var(--bs-dark-text-emphasis);
+    background-color: var(--bs-dark-bg-subtle);
+    border: 1px solid var(--bs-dark-border-subtle);
+}
+
+
+/* .tag-primary {
+    --bs-list-group-color: var(--bs-primary-text-emphasis);
+    --bs-list-group-bg: var(--bs-primary-bg-subtle);
+    --bs-list-group-border-color: var(--bs-primary-border-subtle);
+    color: var(--bs-primary-text-emphasis);
+    background-color: var(--bs-primary-bg-subtle);
+    border: 1px solid var(--bs-primary-border-subtle);
+}
+
+
+.tag-secondary {
+    --bs-list-group-color: var(--bs-secondary-text-emphasis);
+    --bs-list-group-bg: var(--bs-secondary-bg-subtle);
+    --bs-list-group-border-color: var(--bs-secondary-border-subtle);
+    color: var(--bs-secondary-text-emphasis);
+    background-color: var(--bs-secondary-bg-subtle);
+    border: 1px solid var(--bs-secondary-border-subtle);
+} */
+
+
+.tag-danger {
+    --bs-list-group-color: var(--bs-danger-text-emphasis);
+    --bs-list-group-bg: var(--bs-danger-bg-subtle);
+    --bs-list-group-border-color: var(--bs-danger-border-subtle);
+    color: var(--bs-danger-text-emphasis);
+    background-color: var(--bs-danger-bg-subtle);
+    border: 1px solid var(--bs-danger-border-subtle);
+}
