@@ -1,0 +1,26 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="2"/>
+ </o:shapelayout><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+  path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="Text_x0020_9" o:spid="_x0000_s2057" type="#_x0000_t202"
+  style='position:absolute;margin-left:168pt;margin-top:136pt;width:472pt;
+  height:24pt;z-index:4' filled="f" fillcolor="black [64]" stroked="f"
+  strokecolor="black [64]" strokeweight=".lmm" o:insetmode="auto">
+  <v:fill color2="white [65]"/>
+  <v:textbox>
+   <div style='text-align:center;direction:ltr'><font face="Helv" size="240"
+   color="8"><b>Select the type of job you are bidding:</b></font></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Text">
+   <x:Anchor>
+    21, 0, 17, 0, 80, 0, 20, 0</x:Anchor>
+   <x:AutoFill>False</x:AutoFill>
+   <x:AutoLine>False</x:AutoLine>
+   <x:TextHAlign>Center</x:TextHAlign>
+  </x:ClientData>
+ </v:shape></xml>

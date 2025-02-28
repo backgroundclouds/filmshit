@@ -1,114 +1,159 @@
 # data/templates.yaml
 
 # Section 1: Production Templates
-- section: Callsheets
-  templates:
-    - title: "Callsheet Template"
-      description: "Standard call sheet template"
-      author: ""
-      date: ""
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: "true"
-      details: "Hard borders. Easy to modify. Sized for page print."
-      instructions_path: "/app/static/files/cs_instructions.txt"
-      instructions_name: "cs_instructions.txt"
-    
-    - title: "Music Video Template"
-      description: ""
-      author: ""
-      date: ""
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: ""
-      details: ""
-      instructions_path: "/app/static/files/cs_instructions.txt"
-      instructions_name: "cs_instructions.txt"    
 
-- section: Budgets
+- section: Bidding
   templates:
-    - title: "Point Zero"
+    - title: "Point Zero Bid Template"
       description: " "
-      author: "Jay Wakefield"
-      date: "very dated"
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: ""
-      details: ""
-      instructions_path: ""
-      instructions_name: ""
+      author: ""
+      date: "1998"
+      file_path: "/app/static/files/pointzero_bidtemplate.xls"
+      file_name: "pointzero_bidtemplate.xls"
+      tags:
+        - label: "Excel"
+          style: "tag-success" 
+      details:
+        FileName: "pointzero_bidtemplate.xls"
+        FileSize: "772 kB"
+        FileType: "XLS"
+        FileTypeExtension: "xls"
+        MIMEType: "application/vnd.ms-excel"
+        Creator: ""
+        Company: ""
+        CreateDate: "1998:06:05 00:32:24"
+        ModifyDate: ""
+        LastPrinted: "2022:04:13 22:28:57"
+        Security: "None"
+        LastModifiedBy: "Joshua Parkhill"
+        Password: "11231970"
+        AppVersion: "16.0000"
+        
+
+
     
     - title: "AICP Bid Form"
       description: ""
       author: "AICP"
-      date: ""
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: "true"
-      details: "Excel Macros"
-      instructions_path: ""
-      instructions_name: ""
+      date: "Jan 2023"
+      file_path: "https://aicp.nyc3.digitaloceanspaces.com/content/documents/AICP_bidform_2023_update.xlsm"
+      file_name: "AICP_bidform_2023_update.xlsm"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+        - label: "macros"
+          style: "tag-success"         
+
 
     - title: "AICP Bid Form (Google Sheets)"
-      description: "AICP Bid Form converted to live Google Sheet"
-      author: "AICP // Josh Parkhill"
+      description: "AICP Bid Form converted to live Google Sheet for shared bidding flows."
+      author: "Josh Parkhill"
       date: ""
-      file_path: "https://google.com"
-      file_name: "cs_job.txt"
-      additional: ""
-      details: ""
-      instructions_path: "/app/static/files/cs_instructions.txt"
-      instructions_name: "cs_instructions.txt"
+      file_path: "https://docs.google.com/spreadsheets/d/10sQICZNx6kw8aHo4pGCsLSlfVRzOOLxjckfqwYNmh04/edit?usp=sharing"
+      file_name: "AICP_bidform.gsheet"
+      tags:
+        - label: "Google Sheets"
+          style: "tag-info"
+      details:
+        File Type: "XLS"
+        File Type Extension: "xls"
+        MIME Type: "application/vnd.ms-excel"
+        Last Modified By: "Joshua Parkhill"       
+
+- section: Production
+  templates:
+    - title: "Callsheet Template"
+      description: "Standard callsheet template"
+      author: ""
+      date: ""
+      file_path: "/static/files/job_cs_DATE.xlsx"
+      file_name: "job_cs_DATE.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+
+    - title: "PC Template"
+      description: "Commonly used PC Template"
+      author: "G.Wood"
+      date: "2013"
+      file_path: "/app/static/files/pc_summary_v1.4d.xlsx"
+      file_name: "pc_summary_v1.4d.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+        - label: "no-macros"
+          style: "tag-success"              
+      details:
+        FileName: "Petty Cash Summary with Descriptions v1.4d 8 pages.xlsx"
+        FileSize: "80 kB"
+        FileType: "XLSX"
+        FileTypeExtension: "xlsx"
+        MIMEType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        ZipRequiredVersion: "20"
+        ZipBitFlag: "0x0006"
+        ZipCompression: "Deflated"
+        Creator: "Gareth Wood"
+        Company: "Phantom Pictures"
+        CreateDate: "2004:03:11 02:53:06Z"
+        ModifyDate: "2021-07-01T19:15:29Z"
+        LastPrinted: "2013-06-28T00:42:15Z"
+        Security: "None"
+        LastModifiedBy: "Gareth Wood"
+        AppVersion: "16.0300"        
+
+    - title: "PC Template (Improved)"
+      description: "PC Template w/ improved functionality."
+      author: ""
+      date: "June 2023"
+      file_path: "/app/static/files/pc_summary_v2.01.xlsx"
+      file_name: "pc_summary_v2.01.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+      details:
+        File Type: "XLS"
+        File Type Extension: "xls"
+        MIME Type: "application/vnd.ms-excel"
+        Last Modified By: "Joshua Parkhill"                   
+
 
 - section: Actualization
   templates:
-    - title: "Hourly Cheat Sheet"
+    - title: "Day Rate Cheat Sheet"
       description: "Payroll to Dayrate cheat sheet"
       author: "Josh Parkhill"
       date: ""
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: ""
-      details: ""
-      instructions_path: ""
-      instructions_name: ""
-    
-    - title: "PO Book_PO Log Duet"
+      file_path: "/app/static/files/dayrate_cheat_sheet.xlsx"
+      file_name: "dayrate_cheat_sheet.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"     
+      details:
+        File Type: "XLS"
+        File Type Extension: "xls"
+        MIME Type: "application/vnd.ms-excel"
+        Last Modified By: "Joshua Parkhill"   
+          
+    - title: "Generative PO Book & Log Tracker"
       description: "Custom PO Book. Works well with PO Book, PO Log workflow"
       author: "Josh Parkhill"
       date: ""
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: ""
-      details: ""
-      instructions_path: ""
-      instructions_name: ""
+      file_path: "/app/static/files/PO_generation_book_log_v1.9.xlsm"
+      file_name: "PO_generation_book_log_v1.9.xlsm"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+        - label: "macros"
+          style: "tag-success"         
+      details:
+        File Type: "XLS"
+        File Type Extension: "xls"
+        MIME Type: "application/vnd.ms-excel"
+        Last Modified By: "Joshua Parkhill"   
 
 
 
-- section: PC Templates
-  templates:
-    - title: "PC Template"
-      description: "Standard Commercial PC Template. No Macros. .xls"
-      author: ""
-      date: "circa 2014"
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: ""
-      details: ""
-      instructions_path: ""
-      instructions_name: ""
-
-    - title: "PC Template (Improved)"
-      description: "PC Template w/ improved functionality. Macros .xlsm."
-      author: ""
-      date: "circa 2014"
-      file_path: "/app/static/files/call_sheet_template.txt"
-      file_name: "cs_job.txt"
-      additional: "true"
-      details: "-additional details-"
-      instructions_path: "/app/static/files/cs_instructions.txt"
-      instructions_name: "cs_instructions.txt"    
+   
 
 
   

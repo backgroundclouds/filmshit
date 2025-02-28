@@ -1,0 +1,129 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="4,22,25,31,33,38"/>
+  <o:regrouptable v:ext="edit">
+   <o:entry new="1" old="0"/>
+  </o:regrouptable>
+ </o:shapelayout><v:shapetype id="_x0000_t201" coordsize="21600,21600" o:spt="201"
+  path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path shadowok="f" o:extrusionok="f" strokeok="f" fillok="f" o:connecttype="rect"/>
+  <o:lock v:ext="edit" shapetype="t"/>
+ </v:shapetype><v:shape id="_x0000_s4224" type="#_x0000_t201" style='position:absolute;
+  margin-left:471pt;margin-top:525pt;width:67pt;height:15pt;z-index:1'
+  o:button="t" stroked="f" o:insetmode="auto">
+  <v:fill o:detectmouseclick="t"/>
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:textbox o:singleclick="f">
+   <div style='text-align:center;direction:ltr'><font face="Arial" size="140"
+   color="23">Convert Rates</font></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Button">
+   <x:Anchor>
+    10, 8, 55, 4, 10, 75, 56, 8</x:Anchor>
+   <x:PrintObject>False</x:PrintObject>
+   <x:AutoFill>False</x:AutoFill>
+   <x:AutoLine>False</x:AutoLine>
+   <x:FmlaMacro>[0]!Change_Rates</x:FmlaMacro>
+   <x:TextHAlign>Center</x:TextHAlign>
+   <x:TextVAlign>Center</x:TextVAlign>
+  </x:ClientData>
+ </v:shape><v:shape id="_x0000_s4227" type="#_x0000_t201" style='position:absolute;
+  margin-left:4pt;margin-top:4pt;width:61pt;height:14pt;z-index:2' o:button="t"
+  stroked="f" o:insetmode="auto">
+  <v:fill o:detectmouseclick="t"/>
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:textbox o:singleclick="f">
+   <div style='text-align:center;direction:ltr'><font face="Arial" size="140"
+   color="23">Send Actuals</font></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Button">
+   <x:Anchor>
+    0, 4, 0, 4, 1, 32, 0, 18</x:Anchor>
+   <x:PrintObject>False</x:PrintObject>
+   <x:AutoFill>False</x:AutoFill>
+   <x:AutoLine>False</x:AutoLine>
+   <x:FmlaMacro>[0]!SEND_TOTALS</x:FmlaMacro>
+   <x:TextHAlign>Center</x:TextHAlign>
+   <x:TextVAlign>Center</x:TextVAlign>
+  </x:ClientData>
+ </v:shape><v:shape id="_x0000_s4228" type="#_x0000_t201" style='position:absolute;
+  margin-left:70pt;margin-top:4pt;width:28pt;height:14pt;z-index:3' o:button="t"
+  stroked="f" o:insetmode="auto">
+  <v:fill o:detectmouseclick="t"/>
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:textbox o:singleclick="f">
+   <div style='text-align:center;direction:ltr'><font face="Arial" size="140"
+   color="23">Print</font></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Button">
+   <x:Anchor>
+    2, 4, 0, 4, 2, 32, 0, 18</x:Anchor>
+   <x:PrintObject>False</x:PrintObject>
+   <x:AutoFill>False</x:AutoFill>
+   <x:AutoLine>False</x:AutoLine>
+   <x:FmlaMacro>[0]!PrintPZ</x:FmlaMacro>
+   <x:TextHAlign>Center</x:TextHAlign>
+   <x:TextVAlign>Center</x:TextVAlign>
+  </x:ClientData>
+ </v:shape><v:shape id="_x0000_s4236" type="#_x0000_t201" style='position:absolute;
+  margin-left:90pt;margin-top:175pt;width:82pt;height:12pt;z-index:4;
+  mso-wrap-style:tight' o:button="t" stroked="f" o:insetmode="auto">
+  <v:fill o:detectmouseclick="t"/>
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:textbox o:singleclick="f">
+   <div style='text-align:center;direction:ltr'><font face="Arial" size="140"
+   color="23">Administration</font></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Button">
+   <x:SizeWithCells/>
+   <x:Anchor>
+    2, 24, 16, 6, 3, 24, 18, 0</x:Anchor>
+   <x:PrintObject>False</x:PrintObject>
+   <x:AutoFill>False</x:AutoFill>
+   <x:AutoLine>False</x:AutoLine>
+   <x:FmlaMacro>[0]!openMarkupInsurance</x:FmlaMacro>
+   <x:TextHAlign>Center</x:TextHAlign>
+   <x:TextVAlign>Center</x:TextVAlign>
+  </x:ClientData>
+ </v:shape><v:shape id="_x0000_s4238" type="#_x0000_t201" style='position:absolute;
+  margin-left:445pt;margin-top:373pt;width:47pt;height:12pt;z-index:5'
+  o:regroupid="1" o:button="t" stroked="f" o:insetmode="auto">
+  <v:fill o:detectmouseclick="t"/>
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:textbox o:singleclick="f">
+   <div style='text-align:center;direction:ltr'><font face="Arial" size="120"
+   color="23">Add Rows</font></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Button">
+   <x:Anchor>
+    9, 64, 40, 5, 10, 29, 41, 12</x:Anchor>
+   <x:PrintObject>False</x:PrintObject>
+   <x:AutoFill>False</x:AutoFill>
+   <x:AutoLine>False</x:AutoLine>
+   <x:FmlaMacro>[0]!addOVERAGEline</x:FmlaMacro>
+   <x:TextHAlign>Center</x:TextHAlign>
+   <x:TextVAlign>Center</x:TextVAlign>
+  </x:ClientData>
+ </v:shape><v:shape id="_x0000_s4239" type="#_x0000_t201" style='position:absolute;
+  margin-left:495pt;margin-top:373pt;width:44pt;height:12pt;z-index:6'
+  o:regroupid="1" o:button="t" stroked="f" o:insetmode="auto">
+  <v:fill o:detectmouseclick="t"/>
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:textbox o:singleclick="f">
+   <div style='text-align:center;direction:ltr'><font face="Arial" size="120"
+   color="23">Del Rows</font></div>
+  </v:textbox>
+  <x:ClientData ObjectType="Button">
+   <x:Anchor>
+    10, 32, 40, 5, 10, 76, 41, 12</x:Anchor>
+   <x:PrintObject>False</x:PrintObject>
+   <x:AutoFill>False</x:AutoFill>
+   <x:AutoLine>False</x:AutoLine>
+   <x:FmlaMacro>[0]!delOVERAGEline</x:FmlaMacro>
+   <x:TextHAlign>Center</x:TextHAlign>
+   <x:TextVAlign>Center</x:TextVAlign>
+  </x:ClientData>
+ </v:shape></xml>

@@ -35,24 +35,70 @@ Templates | FilmShit
 
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <a href="{{ template.file_path }}" download class="text-primary align-bottom mb-0">{{ template.file_name
-                  }}</a>
-
+                {% if template.tags %}
+                {% for tag in template.tags %}
+                <span class="badge {{tag.style }}">{{ tag.label }}</span>
+                {% endfor %}
+                {% endif %}
 
               </div>
 
 
               <div>
                 <small class="text-muted d-block mb-2">
-                  {{ template.author if template.author else "Author: Unattributed" }} | {{ template.date if
+                  Source: {{ template.author if template.author else " Unattributed" }} | {{ template.date if
                   template.date else
-                  "Undated" }}
+                  "undated" }}
                 </small>
               </div>
             </div>
           </div>
-          {% if template.additional %}
-          <!-- Accordion inside card-body -->
+          <div class="card-footer">
+            <div class="row flex-fill">
+              <div class="col-sm-5">
+                <a href="{{ template.file_path }}" download class="text-primary align-bottom mb-0">{{ template.file_name
+                  }}</a>
+
+
+              </div>
+            </div>
+          </div>
+          {% if template.details %}
+          <div class="bs-component">
+            <div class="accordion" id="accordion-{{ loop.index }}">
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="heading-{{ loop.index }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-{{ loop.index }}" aria-expanded="false"
+                    aria-controls="collapse-{{ loop.index }}">
+                    Details
+                  </button>
+                </h6>
+                <div id="collapse-{{ loop.index }}" class="accordion-collapse collapse"
+                  aria-labelledby="heading-{{ loop.index }}">
+                  <div class="accordion-body">
+                    <pre class="">
+{% for key, value in template.details.items() %}
+{{ key }}: {{ value }}
+{% endfor %}
+          </pre>
+                    <div>
+                      <!-- Uncomment if instructions exist -->
+                      <!-- {% if template.instructions_path %}
+                      <a href="{{ template.instructions_path }}" download class="text-primary align-bottom mb-0">
+                        {{ template.instructions_name }}</a>
+                      {% endif %} -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+
+
+          <!-- {% if template.additional %}
           <div class="bs-component">
             <div class="accordion" id="accordion-{{ loop.index }}">
               <div class="accordion-item">
@@ -67,19 +113,20 @@ Templates | FilmShit
                   aria-labelledby="heading-{{ loop.index }}">
                   <div class="accordion-body ">
                     <strong><code>details:</code></strong> {{ template.details }}
-                    <div>
-                      {% if template.instructions_path %}
+                    <div> -->
+          <!-- {% if template.instructions_path %}
                       <a href="{{ template.instructions_path }}" download class="text-primary align-bottom mb-0">
                         {{ template.instructions_name }}</a>
-                      {% endif %}
-                    </div>
+                      {% endif %} -->
+          <!-- </div>
                   </div>
                 </div>
 
               </div>
             </div>
           </div>
-          {% endif %}
+          {% endif %} -->
+
         </div>
         {% endfor %}
       </div>

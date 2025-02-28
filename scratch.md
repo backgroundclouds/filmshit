@@ -453,3 +453,103 @@ Resources | FilmShit
 
 {% endblock %}
 ```
+
+
+### templates.html backup
+
+
+```
+{% extends 'base.html' %}
+
+{% block title %}
+Templates | FilmShit
+{% endblock %}
+
+{% block content %}
+
+
+
+<!-- allign left -->
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1 class="mb-3"><small>📂</small>Templates</h2>
+      <p class="lead">Commonly used templates that may be useful for jobs.</p>
+  </div>
+
+  {% for section in templates %}
+  <div class="mb-5 pb-3 border-bottom">
+    <h4 class="mb-3">{{ section.section }}</h4>
+    <ul class="list-group">
+      <div class="bs-component">
+        {% for template in section.templates %}
+        <!-- Card -->
+        <div class="card template-card border-dark mb-3 p-0" style="max-width: 50rem;">
+          <!-- <div class="card-header">
+            <h5 class="">{{ template.title }}</h5>
+          </div> -->
+          <div class="card-body">
+            <h5 class="">
+              {{ template.title }}
+            </h5>
+
+            <p class="card-text mb-2">{{ template.description }}</p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <a href="{{ template.file_path }}" download class="text-primary align-bottom mb-0">{{ template.file_name
+                  }}</a>
+
+
+              </div>
+
+
+              <div>
+                <small class="text-muted d-block mb-2">
+                  Source: {{ template.author if template.author else " Unattributed" }} | {{ template.date if
+                  template.date else
+                  "undated" }}
+                </small>
+              </div>
+            </div>
+          </div>
+          {% if template.additional %}
+          <!-- Accordion inside card-body -->
+          <div class="bs-component">
+            <div class="accordion" id="accordion-{{ loop.index }}">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-{{ loop.index }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-{{ loop.index }}" aria-expanded="false"
+                    aria-controls="collapse-{{ loop.index }}">
+                    Additional Info
+                  </button>
+                </h2>
+                <div id="collapse-{{ loop.index }}" class="accordion-collapse collapse"
+                  aria-labelledby="heading-{{ loop.index }}">
+                  <div class="accordion-body ">
+                    <strong><code>details:</code></strong> {{ template.details }}
+                    <div>
+                      {% if template.instructions_path %}
+                      <a href="{{ template.instructions_path }}" download class="text-primary align-bottom mb-0">
+                        {{ template.instructions_name }}</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+
+
+{% endblock %}
+```
