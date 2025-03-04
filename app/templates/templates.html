@@ -63,25 +63,25 @@ Templates | FilmShit
               </div>
             </div>
           </div>
-          {% if template.details %}
+          {% if template.meta %}
           <div class="bs-component">
             <div class="accordion" id="accordion-{{ loop.index }}">
               <div class="accordion-item">
                 <h6 class="accordion-header" id="heading-{{ loop.index }}">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-{{ loop.index }}" aria-expanded="false"
+                  <button class="accordion-button collapsed fw-medium text-secondary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse-{{ loop.index }}" aria-expanded="false"
                     aria-controls="collapse-{{ loop.index }}">
-                    Details
+                    Meta
                   </button>
                 </h6>
                 <div id="collapse-{{ loop.index }}" class="accordion-collapse collapse"
                   aria-labelledby="heading-{{ loop.index }}">
                   <div class="accordion-body">
-                    <pre class="">
-{% for key, value in template.details.items() %}
-{{ key }}: {{ value }}
-{% endfor %}
-          </pre>
+                    <ul class="list-unstyled mb-0">
+                      {% for key, value in template.meta.items() %}
+                      <li><strong>{{ key }}</strong>: {{ value }}</li>
+                      {% endfor %}
+                    </ul>
                     <div>
                       <!-- Uncomment if instructions exist -->
                       <!-- {% if template.instructions_path %}
@@ -95,6 +95,33 @@ Templates | FilmShit
             </div>
           </div>
           {% endif %}
+
+          {% if template.details %}
+          <div class="bs-component">
+            <div class="accordion" id="details-accordion-{{ loop.index }}">
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="details-heading-{{ loop.index }}">
+                  <button class="accordion-button collapsed fw-medium text-secondary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#details-collapse-{{ loop.index }}" aria-expanded="false"
+                    aria-controls="details-collapse-{{ loop.index }}">
+                    Details
+                  </button>
+                </h6>
+                <div id="details-collapse-{{ loop.index }}" class="accordion-collapse collapse"
+                  aria-labelledby="details-heading-{{ loop.index }}">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      {% for item in template.details %}
+                      <li>{{ item }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
 
 
 
