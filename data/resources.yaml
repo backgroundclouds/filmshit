@@ -64,7 +64,7 @@
           item_link: "https://roguewave.tv/roguebudget/"
           tags:
             - tag: "App (beta)"
-              tag_style: "tag-warning"
+              tag_style: "bg-warning"
 
 - category: Bidding Guidelines
   groups:
@@ -126,7 +126,7 @@
           item_link: "https://www.capspayroll.com/contact/"
           tags:
             - tag: "Paper"
-              tag_style: "bg-warning"
+              tag_style: "tag-warning"
             - tag: "Digital PDF"
               tag_style: "tag-danger"
 
@@ -136,7 +136,7 @@
           item_link: "https://www.ep.com/"
           tags:
             - tag: "Paper"
-              tag_style: "bg-warning"
+              tag_style: "tag-warning"
 
     - group_name: "Revolution Entertainment Services"
       entries:
@@ -144,7 +144,7 @@
           item_link: "https://revolutiones.com/"
           tags:
             - tag: "Paper"
-              tag_style: "bg-warning"
+              tag_style: "tag-warning"
 
     - group_name: "Extreme Reach"
       entries:
@@ -152,7 +152,7 @@
           item_link: "https://www.xr.global/solutions/production-studios"
           tags:
             - tag: "Paper"
-              tag_style: "bg-warning"
+              tag_style: "tag-warning"
 
 - category: Digital Communities
   groups:

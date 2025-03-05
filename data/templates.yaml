@@ -19,11 +19,11 @@
         File Type: XLS
         MIME Type: application/vnd.ms-excel
         Created On: 1998-06-05
+        Creator: ""
         Software: Microsoft Macintosh Excel
-        Last Printed: 2022-04-13
-        Last Modified By: Joshua Parkhill
         App Version: 16.0000
         Security: None
+        Last Printed: 2022-04-13
         Password: 11231970
 
         Product Info: |
@@ -95,7 +95,6 @@
         File Name: Petty Cash Summary with Descriptions v1.4d 8 pages.xlsx
         File Size: 80 kB
         File Type: XLSX
-        File Type Extension: xlsx
         MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
         Created On: 2013-06-28
         Last Modified By: Gareth Wood
@@ -113,16 +112,18 @@
     - title: "PC Template (Improved)"
       description: "PC Template w/ improved functionality."
       author: "J.Parkhill"
-      date: "June 2023"
+      date: "May 2023"
       file_path: "/static/files/pc_summary_v2.01.xlsx"
       file_name: "pc_summary_v2.01.xlsx"
       tags:
         - label: "Excel"
           style: "tag-success"
+        - label: "custom"
+          style: "bg-info"
       meta:
         File Name: PC Envelope (pc_summary_v2.01.xlsx)
         File Size: 104 kB
-        File Type Extension: xlsx
+        File Type: XLSX
         MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
         Created On: 2023-05-15
         Last Modified By: Joshua Parkhill
@@ -130,8 +131,8 @@
         password: homehome
       details:
         - Layout formatted to portrait. Columns reduced.
-        - Improved layout allows for PA handwriting when needed.
-        - Line Descriptions display on PC Sheet
+        - Improved layout allows for better PA handwriting.
+        - Line Descriptions display on PC Sheet.
         - Alpha values accepted as Line Nos. For Example CS14 will allocate to Travel Expenses
         - Improved backend formulas
         - Password to unlock page tabs is 'homehome'
@@ -142,7 +143,7 @@
     - title: "Dayrate Calculator"
       description: "Dayrate to hourly conversion grid."
       author: "J.Parkhill"
-      date: "2024"
+      date: "2023"
       file_path: "/static/files/dayrate_calculator_v0.6.xlsx"
       file_name: "dayrate_calculator_v0.6.xlsx"
       tags:
@@ -154,7 +155,6 @@
         File Name: Dayrate Calculator (dayrate_calculator_v0.6.xlsx)
         File Size: 51 kB
         File Type: XLSX
-        File Type Extension: xlsx
         MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
         Created On: 2023-01-30
         Last Modified By: Joshua Parkhill
@@ -167,7 +167,7 @@
         - Visual hourly carry over. 
         - Calculates union specific rules.
         - Local 600, Local 52, DGA, Non-Union variations, 
-        - Other union rules easy to be implemented by replicating the same scheme.
+        - Other union rules easy to be implemented by replicating scheme.
 
     - title: "Smart PO Book"
       description: "Generative PO Book. Best used with a HotBudget or TrueBudget workflow."
@@ -186,7 +186,6 @@
         File Name: Smart PO Book template (smartPOBook_v1.xlsm)
         File Size: 1131 kB
         File Type: XLSM
-        File Type Extension: xlsm
         MIME Type: application/vnd.ms-excel.sheet.macroEnabled.12
         Created On: 2024-07-31
         Last Modified By: Joshua Parkhill
@@ -198,10 +197,7 @@
         - Copy into your Hotbudget/TrueBudget
         - Exports POs in batch by filename
         - Specific PayID + Date calculation
-        
-
-
-
+        - Fluid tracking, baby!
 
    
 
