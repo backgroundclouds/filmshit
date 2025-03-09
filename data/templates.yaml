@@ -196,14 +196,6 @@
         - Each PO sheet calculates with PO Log, and job line numbers
         - Copy into your Hotbudget/TrueBudget
         - Exports POs in batch by filename
-        - Specific PayID + Date calculation
-        - Fluid tracking, baby!
-
-   
-
-
-  
-
-
-
+        - Specific PayID ➝ Date ➝  LineNo 𝙪𝙣𝙞𝙦𝙪𝙚 auto-summing.
+        - Fluid tracking—
 

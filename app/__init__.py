@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from datetime import datetime
 import yaml
 import os
@@ -6,6 +6,19 @@ import os
 def create_app():
     app = Flask(__name__)
     app.config.from_object('config.config.Config')
+    
+    # Only disable caching when running locally
+    if os.getenv("FLASK_ENV") == "development":
+        @app.after_request
+        def add_header(response):
+            response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+            response.headers["Pragma"] = "no-cache"
+            response.headers["Expires"] = "0"
+            return response
+
+        @app.route('/static/<path:filename>')
+        def static_file(filename):
+            return send_from_directory('static', filename, cache_timeout=0)
 
     @app.route('/')
     def home():
@@ -21,14 +34,7 @@ def create_app():
             
         return render_template('templates.html', templates=templates, site_updated=site_updated)
     
-    # @app.route('/resources')
-    # def resources():
-    #     site_updated = datetime.now().strftime('%Y-%m-%d')
-    #     # Load the main resources.yaml
-    #     with open('data/resources.yaml', 'r') as file:
-    #         resources = yaml.safe_load(file)
 
-    #     return render_template('resources.html', resources=resources, site_updated=site_updated)
     
     @app.route('/resources')
     def resources():
@@ -57,7 +63,17 @@ def create_app():
 
     return app
 
-if __name__ == '__main__':
-    app = create_app()
-    port = int(os.environ.get('PORT', 8000))
-    app.run(host='0.0.0.0', port=port)
+# if __name__ == '__main__':
+#     app = create_app()
+#     app.config["ENV"] = "development"  # Ensure Flask knows it's running locally
+#     port = int(os.environ.get('PORT', 5001))  # Set a unique port
+#     app.run(host='0.0.0.0', port=port, debug=True)
+
+# if __name__ == '__main__':
+#     app = create_app()
+#     port = int(os.environ.get('PORT', 8000))
+#     app.run(host='0.0.0.0', port=port)
+
+
+
+# FLASK_APP=app FLASK_ENV=development flask run --port=5001
