@@ -3,6 +3,33 @@
 {% block title %}
 Utility Page | FilmShit
 {% endblock %}
+{% block meta_description %}Built by a commercial production manager with an open-source ethos. Contact for project
+advice. Developed using Python frameworks.{% endblock %}
+{% block og_title %}Utility Page | About Filmshit {% endblock %}
+{% block og_description %}Built by a commercial production manager with an open-source ethos. Contact for project
+advice. Developed using Python frameworks.{% endblock %}
+
+{% block head %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Utility Page - FilmShit",
+    "url": "https://filmshit.app/utility",
+    "description": "Information about FilmShit’s open-source ethos, site author, and the tools used to build it. Contact for advice on commercial film production projects.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "FilmShit",
+      "url": "https://filmshit.app"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Josh Parkhill",
+      "url": "https://jptv.space"
+    }
+  }
+  </script>
+{% endblock %}
 
 {% block content %}
 
@@ -15,7 +42,8 @@ Utility Page | FilmShit
   <div class="mb-5 border-bottom pb-4">
     <h5 class="text-uppercase text-secondary mb-2">🌐 Open Source Ethos</h5>
     <p class="text-muted">
-      In the spirit of open-source, these templates are here to use or adapt⎯ transparency in one corner tends invites transparency in another. If there is something you yourself would like to contribute, be it ideas, resources, or
+      In the spirit of open-source, these templates are here to use or adapt⎯ transparency in one corner tends invites
+      transparency in another. If there is something you yourself would like to contribute, be it ideas, resources, or
       feedback, get in contact via email
       at <a href="mailto:josh@jpax.tv">josh@jpax.tv</a>.
     </p>

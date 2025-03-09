@@ -1,0 +1,887 @@
+./app/templates/index.html
+./app/templates/about.html
+./app/templates/base.html
+./app/templates/includes/contact_info.html
+./app/templates/resources.html
+./app/templates/templates.html
+./app/templates/utility.html
+./data/templates.yaml
+./data/resources.yaml
+{% extends 'base.html' %}
+
+{% block title %}
+FilmShit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center mb-4">
+  <h1 class="mb-3">🗂️ FilmShit</h1>
+  <p class="lead">Shit commonly used in commercial production
+  </p>
+
+</div>
+
+<!-- Shit commonly used in commercial film production. -->
+
+
+<div class="directory-section mb-4">
+  <h2 class="mb-2">📂 What's Here</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <h3 class="m-4"> <a href="/templates">Production Templates</a>
+    </li>
+    </h3>
+
+
+
+  </ul>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <h3 class="m-4"><a href="/resources">Resources</a>
+    </li>
+    </h3>
+  </ul>
+</div>
+
+<br>
+<br>
+
+
+<div class="directory-section mb-2 min-height-auto">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <h3 class="mb-1 fs-6"><a href="/utility">Utility Page</a></h3>
+    </li>
+  </ul>
+</div>
+
+<div class="flex-column">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+{% endblock %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Directory Site | FilmShit{% endblock %}</title>
+
+  <!-- Bootswatch Flatly Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    popoverTriggerList.forEach(popover => new bootstrap.Popover(popover));
+  });
+</script>
+
+<body>
+
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="/">FilmShit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/templates">Templates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resources">Resources</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- @FIX -->
+
+
+  <!-- Main Content -->
+  <main class="container directory-structure">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-start pt-1 mt-4 border-top" style="min-height: auto;">
+    <div class="container d-flex justify-content-between align-items-center" style="min-height: auto;">
+      <div class="flex-column">
+        <p class="mb-1 small secondary">© 2025 FilmShit.</p>
+        <p class="mb-0 small secondary">
+          Site Author: <a href="https://jptv.space">Josh Parkhill</a>
+        </p>
+      </div>
+      <div class="flex-column">
+        <p class="mb-1 small primary"> <a href="/utility">Utility Page</a></p>
+        <p class="mb-1 small">Site Updated: {{ site_updated }} </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>{% extends 'base.html' %}
+
+{% block title %}
+Resources | FilmShit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center mb-4">
+  <h1 class="mb-3">Resources</h1>
+  <p class="lead">Reference materials, tools, guidelines, etc,. </p>
+</div>
+
+<div class="directory-grid">
+  {% for category in resources %}
+  <div class="directory-section mb-5 pb-3 border-bottom">
+    <h3 class="mb-3">📁 {{ category.category }}</h3>
+
+    {% for group in category.groups %}
+    <div class="group-section mb-4">
+      <!-- <h5 class="mb-2">{{ group.group_name }}</h5> -->
+      <ul class="list-group border border-dark">
+        {% for entry in group.entries %}
+        <li class="card resource-card list-group-item border-light  py-2">
+          <div class="card-body">
+            <!-- <div class="card-body d-flex justify-content-between align-items-center"> -->
+            <div class="d-flex flex-column flex-lg-row">
+              <!-- <div class="d-flex flex-row align-items-center"> -->
+              <div class="avatar-container me-5 mb-1"> <span class="small avatar avatar-text rounded-3"
+                  title="{{group.group_name}}">
+                  {{group.group_name}}</span>
+              </div>
+
+              <div class="row flex-fill">
+                <div class="col-sm-5">
+                  <h4 class="h5">{{ entry.item_name }}</h4>
+                  {% if entry.tags %}
+                  {% for tag in entry.tags %}
+                  <span class="badge {{ tag.tag_style }}">{{ tag.tag }}</span>
+                  {% endfor %}
+                  {% endif %}
+                  <!-- <span class="badge bg-secondary"></span> -->
+                </div>
+
+                <div class="col-sm-4 py-2">
+                  <a href="{{ entry.item_link }}" class="btn btn-sm btn-outline-info" target="_blank"
+                    rel="noopener noreferrer">
+                    {{ entry.item_link }}
+                  </a>
+
+                </div>
+
+                <div class="col-sm-3 text-lg-end">
+                  <span> </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+
+  </div>
+  {% endfor %}
+</div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipEl) {
+      new bootstrap.Tooltip(tooltipEl);
+    });
+  });
+</script>
+{% endblock %}{% extends 'base.html' %}
+
+{% block title %}
+Templates | FilmShit
+{% endblock %}
+
+{% block content %}
+
+
+
+<!-- allign left -->
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1 class="mb-3"><small>📂</small>Templates</h2>
+      <p class="lead">A mix of standard-use and custom templates.</p>
+  </div>
+
+  {% for section in templates %}
+  <div class="mb-5 pb-3 border-bottom">
+    <h4 class="mb-3">{{ section.section }}</h4>
+    <ul class="list-group">
+      <div class="bs-component">
+        {% for template in section.templates %}
+        <!-- Card -->
+        <div class="card template-card border-dark mb-3 p-0" style="max-width: 50rem;">
+          <!-- <div class="card-header">
+            <h5 class="">{{ template.title }}</h5>
+          </div> -->
+          <div class="card-body">
+            <h5 class="">
+              {{ template.title }}
+            </h5>
+
+            <p class="card-text mb-2">{{ template.description }}</p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                {% if template.tags %}
+                {% for tag in template.tags %}
+                <span class="badge {{tag.style }}">{{ tag.label }}</span>
+                {% endfor %}
+                {% endif %}
+
+              </div>
+
+
+              <div>
+                <small class="text-muted d-block mb-2">
+                  Source: {{ template.author if template.author else " Unattributed" }} | {{ template.date if
+                  template.date else
+                  "undated" }}
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row flex-fill">
+              <div class="col-sm-5">
+                <a href="{{ template.file_path }}" download class="text-primary align-bottom mb-0">{{ template.file_name
+                  }}</a>
+
+
+              </div>
+            </div>
+          </div>
+          {% if template.meta %}
+          <div class="bs-component">
+            <div class="accordion" id="accordion-{{ loop.index }}">
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="heading-{{ loop.index }}">
+                  <button class="accordion-button collapsed fw-medium text-secondary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse-{{ loop.index }}" aria-expanded="false"
+                    aria-controls="collapse-{{ loop.index }}">
+                    Meta
+                  </button>
+                </h6>
+                <div id="collapse-{{ loop.index }}" class="accordion-collapse collapse"
+                  aria-labelledby="heading-{{ loop.index }}">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0">
+                      {% for key, value in template.meta.items() %}
+                      <li><strong>{{ key }}</strong>: {{ value }}</li>
+                      {% endfor %}
+                    </ul>
+                    <div>
+                      <!-- Uncomment if instructions exist -->
+                      <!-- {% if template.instructions_path %}
+                      <a href="{{ template.instructions_path }}" download class="text-primary align-bottom mb-0">
+                        {{ template.instructions_name }}</a>
+                      {% endif %} -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if template.details %}
+          <div class="bs-component">
+            <div class="accordion" id="details-accordion-{{ loop.index }}">
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="details-heading-{{ loop.index }}">
+                  <button class="accordion-button collapsed fw-medium text-secondary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#details-collapse-{{ loop.index }}" aria-expanded="false"
+                    aria-controls="details-collapse-{{ loop.index }}">
+                    Details
+                  </button>
+                </h6>
+                <div id="details-collapse-{{ loop.index }}" class="accordion-collapse collapse"
+                  aria-labelledby="details-heading-{{ loop.index }}">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      {% for item in template.details %}
+                      <li>{{ item }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+
+
+
+          <!-- {% if template.additional %}
+          <div class="bs-component">
+            <div class="accordion" id="accordion-{{ loop.index }}">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-{{ loop.index }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-{{ loop.index }}" aria-expanded="false"
+                    aria-controls="collapse-{{ loop.index }}">
+                    Additional Info
+                  </button>
+                </h2>
+                <div id="collapse-{{ loop.index }}" class="accordion-collapse collapse"
+                  aria-labelledby="heading-{{ loop.index }}">
+                  <div class="accordion-body ">
+                    <strong><code>details:</code></strong> {{ template.details }}
+                    <div> -->
+          <!-- {% if template.instructions_path %}
+                      <a href="{{ template.instructions_path }}" download class="text-primary align-bottom mb-0">
+                        {{ template.instructions_name }}</a>
+                      {% endif %} -->
+          <!-- </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          {% endif %} -->
+
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+
+
+{% endblock %}{% extends 'base.html' %}
+
+{% block title %}
+Utility Page | FilmShit
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h2 class="mb-3">⚖️ Utility Page</h2>
+  </div>
+
+  <!-- Section 1: Open Source Ethos -->
+  <div class="mb-5 border-bottom pb-4">
+    <h5 class="text-uppercase text-secondary mb-2">🌐 Open Source Ethos</h5>
+    <p class="text-muted">
+      In the spirit of open-source, these templates are here to use or adapt⎯ transparency in one corner tends invites transparency in another. If there is something you yourself would like to contribute, be it ideas, resources, or
+      feedback, get in contact via email
+      at <a href="mailto:josh@jpax.tv">josh@jpax.tv</a>.
+    </p>
+  </div>
+
+
+  <!-- Section 3: Site Author -->
+  <div class="mb-3 border-bottom pb-2">
+    <h5 class="text-uppercase text-secondary mb-2">👤 Site Author</h5>
+    <p class="text-muted">
+      Created by <strong>Josh Parkhill</strong>, a commercial production manager. To connect with Josh about bidding
+      jobs,
+      or other matters: visit him directly at.
+    </p>
+    <ul class="list-unstyled ps-5 custom-list">
+      <li>Phone:
+        <a href="tel:+1 917 744 1674">917.744.1674</a>
+      </li>
+      <li>Email:
+        <a href="mailto:josh@jpax.tv" class="">josh@jpax.tv</a>
+      <li>Website:
+        <a href="https://jptv.space" target="_blank" rel="noopener noreferrer">jptv.space</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mb-3 pb-3">
+    <h6 class="text-uppercase text-secondary mb-2">How This Site Is Made</h6>
+    <p>
+      This site was made using Python based frameworks, including but not limited to:
+    </p>
+    <ul class=" ps-3 text-muted">
+      <li>Built with <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer">Flask</a> —
+        a
+        lightweight Python web framework.</li>
+      <li>Styled using <a href="https://bootswatch.com/flatly/" target="_blank" rel="noopener noreferrer">Bootstrap
+          Flatly</a> — part of the Bootswatch theme collection.</li>
+      <li>📄 YAML-powered content generation for structured, dynamic templates and resources.</li>
+      <li>☁️ Deployed using <a href="https://render.com/" target="_blank" rel="noopener noreferrer">Render</a>.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}# data/templates.yaml
+
+# Section 1: Production Templates
+
+- section: Bidding
+  templates:
+    - title: "Point Zero Bid Template"
+      description: " "
+      author: ""
+      date: "1998"
+      file_path: "/static/files/pointzero_bidtemplate.xls"
+      file_name: "pointzero_bidtemplate.xls"
+      tags:
+        - label: "Excel"
+          style: "tag-success" 
+      meta:
+        File Name: pointzero_bidtemplate.xls
+        File Size: 772 kB
+        File Type: XLS
+        MIME Type: application/vnd.ms-excel
+        Created On: 1998-06-05
+        Creator: ""
+        Software: Microsoft Macintosh Excel
+        App Version: 16.0000
+        Security: None
+        Last Printed: 2022-04-13
+        Password: 11231970
+
+        Product Info: |
+          PointZero2000
+          Page &P
+          pointzero
+          Bidding & Auto-actualizing Software
+          for Commercial & Music Video Production
+          Version 2000 for Windows
+          This copy of PointZero is licensed to
+          <Avion Management>
+          License #2000-1169
+          © 1996-2000 PointZero Productions.   
+          All Rights Reserved.
+          Tech Support: (323) 692-7696        
+    
+    - title: "AICP Bid Form"
+      description: ""
+      author: "AICP"
+      date: "Jan 2023"
+      file_path: "https://aicp.nyc3.digitaloceanspaces.com/content/documents/AICP_bidform_2023_update.xlsm"
+      file_name: "AICP_bidform_2023_update.xlsm"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+        - label: "macros"
+          style: "bg-success"
+        - tag: "AICP"
+          tag_style: "tag-info"
+
+
+    # - title: "AICP Bid Form (Google Sheets)"
+    #   description: "AICP Bid Form converted to live Google Sheet for shared bidding flows."
+    #   author: "Josh Parkhill"
+    #   date: ""
+    #   file_path: "https://docs.google.com/spreadsheets/d/10sQICZNx6kw8aHo4pGCsLSlfVRzOOLxjckfqwYNmh04/edit?usp=sharing"
+    #   file_name: "AICP_bidform.gsheet"
+    #   tags:
+    #     - label: "Google Sheets"
+    #       style: "tag-info"
+    #   meta:
+    #     File Type: "XLS"
+    #     File Type Extension: "xls"
+    #     MIME Type: "application/vnd.ms-excel"
+    #     Last Modified By: "Joshua Parkhill"       
+
+- section: Production
+  templates:
+    - title: "Callsheet Template"
+      description: "Standard callsheet template"
+      author: ""
+      date: ""
+      file_path: "/static/files/job_cs_DATE.xlsx"
+      file_name: "job_cs_DATE.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+
+    - title: "PC Template"
+      description: "Commonly used PC Template"
+      author: "G.Wood"
+      date: "2013"
+      file_path: "/static/files/pc_summary_v1.4d.xlsx"
+      file_name: "pc_summary_v1.4d.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"            
+      meta:
+        File Name: Petty Cash Summary with Descriptions v1.4d 8 pages.xlsx
+        File Size: 80 kB
+        File Type: XLSX
+        MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+        Created On: 2013-06-28
+        Last Modified By: Gareth Wood
+        Modified On: 2021-07-01
+        App Version: 16.0300
+
+        Publication Details: |
+          Creator: Gareth Wood
+          Company: Phantom Pictures
+          Distribution Link: http://www.cornerstoretech.com/forms/
+          Creator Email: gareth@cornerstoretech.com
+          Last Version: version 1.3b - 6/28/13
+      
+
+    - title: "PC Template (Improved)"
+      description: "PC Template w/ improved functionality."
+      author: "J.Parkhill"
+      date: "May 2023"
+      file_path: "/static/files/pc_summary_v2.01.xlsx"
+      file_name: "pc_summary_v2.01.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+        - label: "custom"
+          style: "bg-info"
+      meta:
+        File Name: PC Envelope (pc_summary_v2.01.xlsx)
+        File Size: 104 kB
+        File Type: XLSX
+        MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+        Created On: 2023-05-15
+        Last Modified By: Joshua Parkhill
+        App Version: 16.0300
+        password: homehome
+      details:
+        - Layout formatted to portrait. Columns reduced.
+        - Improved layout allows for better PA handwriting.
+        - Line Descriptions display on PC Sheet.
+        - Alpha values accepted as Line Nos. For Example CS14 will allocate to Travel Expenses
+        - Improved backend formulas
+        - Password to unlock page tabs is 'homehome'
+
+
+- section: Actualization
+  templates:
+    - title: "Dayrate Calculator"
+      description: "Dayrate to hourly conversion grid."
+      author: "J.Parkhill"
+      date: "2023"
+      file_path: "/static/files/dayrate_calculator_v0.6.xlsx"
+      file_name: "dayrate_calculator_v0.6.xlsx"
+      tags:
+        - label: "Excel"
+          style: "tag-success"     
+        - label: "custom"
+          style: "bg-info"
+      meta:
+        File Name: Dayrate Calculator (dayrate_calculator_v0.6.xlsx)
+        File Size: 51 kB
+        File Type: XLSX
+        MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+        Created On: 2023-01-30
+        Last Modified By: Joshua Parkhill
+        App Version: 16.0300 
+      details:
+        - INPUTS
+          ▷Dayrate
+          ▷Hours
+        - Cascade hourly breakdown. 
+        - Visual hourly carry over. 
+        - Calculates union specific rules.
+        - Local 600, Local 52, DGA, Non-Union variations, 
+        - Other union rules easy to be implemented by replicating scheme.
+
+    - title: "Smart PO Book"
+      description: "Generative PO Book. Best used with a HotBudget or TrueBudget workflow."
+      author: "J.Parkhill"
+      date: "2024"
+      file_path: "/static/files/smartPOBook_v1.xlsm"
+      file_name: "smartPOBook_v1.xlsm"
+      tags:
+        - label: "Excel"
+          style: "tag-success"
+        - label: "macros"
+          style: "bg-success"
+        - label: "custom"
+          style: "bg-info"         
+      meta:
+        File Name: Smart PO Book template (smartPOBook_v1.xlsm)
+        File Size: 1131 kB
+        File Type: XLSM
+        MIME Type: application/vnd.ms-excel.sheet.macroEnabled.12
+        Created On: 2024-07-31
+        Last Modified By: Joshua Parkhill
+        App Version: 16.0300
+      details:
+        - PO generation.
+        - Use specific numeration schemes, without requiring manual duplication
+        - Each PO sheet calculates with PO Log, and job line numbers
+        - Copy into your Hotbudget/TrueBudget
+        - Exports POs in batch by filename
+        - Specific PayID ➝ Date ➝  LineNo 𝙪𝙣𝙞𝙦𝙪𝙚 auto-summing.
+        - Fluid tracking—
+
+- category: Software Tools
+  groups:
+    - group_name: "Hot Bricks"
+      entries:
+        - item_name: "Hot Budget"
+          item_link: "https://hotbudget.com/download/"
+          tags:
+            - tag: "Excel"
+              tag_style: "tag-success"
+
+        - item_name: "Hot Budget Manual"
+          item_link: "https://downloads.hotbudget.com/HotBudget_v3.0_UserGuide.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+    - group_name: "Revolution Payroll"
+      entries:
+        - item_name: "True Budget"
+          item_link: "https://truebudget.io/"
+          tags:
+            - tag: "Excel"
+              tag_style: "tag-success"
+
+        - item_name: "True Budget Manual"
+          item_link: "https://www.truebudget.io/assets/website/document/TrueBudget_UserGuide-v1.4.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+    - group_name: "Media Services"
+      entries:
+        - item_name: "Showbiz Budgeting"
+          item_link: "https://www.mediaservices.com/showbiz-software/upgrade-showbiz-budgeting/"
+          tags:
+            - tag: "Application"
+              tag_style: "bg-primary"
+
+        - item_name: "Showbiz Budgeting Tutorials"
+          item_link: "https://www.mediaservices.com/showbiz-software/upgrade-showbiz-budgeting/"
+          tags:
+            - tag: "Videos"
+              tag_style: "tag-info"
+
+    - group_name: "Actual"
+      entries:
+        - item_name: "GetActual.io"
+          item_link: "https://getactual.io"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+    - group_name: "Saturation"
+      entries:
+        - item_name: "Saturation.io"
+          item_link: "https://saturation.io/"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+    - group_name: "RogueWave"
+      entries:
+        - item_name: "Rogue Budget"
+          item_link: "https://roguewave.tv/roguebudget/"
+          tags:
+            - tag: "App (beta)"
+              tag_style: "bg-warning"
+
+- category: Bidding Guidelines
+  groups:
+    - group_name: "AICP"
+      entries:
+        - item_name: "National Bidding Guidelines"
+          item_link: "https://aicp.com/assets/editor/AICP_National_Live_Action_Guidelines_April2020_FINAL.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+        - item_name: "Best Practices when Bidding (memo)"
+          item_link: "https://aicp.com/assets/editor/AICP_BiddingGuidelines_BestPractices_June2017.pdf"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+- category: Actualization Guidelines
+  groups:
+    - group_name: "Media Services"
+      entries:
+        - item_name: "Labor Guidelines"
+          item_link: "https://laborguide.mediaservices.com/labor-guide/show-all/"
+          tags:
+            - tag: "Web"
+              tag_style: "tag-info"
+
+        - item_name: "2025 Labor Guidelines (pdf)"
+          item_link: "https://4517874.fs1.hubspotusercontent-na1.net/hubfs/4517874/Labor%20Guide/CommercialGuide_011025.pdf?hsCtaAttrib=164499129412"
+          tags:
+            - tag: "PDF"
+              tag_style: "tag-dark"
+
+
+- category: Digital Payroll
+  groups:
+    - group_name: "Wrapbook"
+      entries:
+        - item_name: "Wrapbook"
+          item_link: "https://wrapbook.com"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+
+    - group_name: "Greenslate"
+      entries:          
+        - item_name: "Greenslate"
+          item_link: "https://greenslate.com/"
+          tags:
+            - tag: "Web App"
+              tag_style: "bg-info"
+
+- category: Antiquated Payroll Services
+  groups:
+    - group_name: "TEAM"
+      entries:
+        - item_name: "CAPS, Media Services Payroll"
+          item_link: "https://www.capspayroll.com/contact/"
+          tags:
+            - tag: "Paper"
+              tag_style: "tag-warning"
+            - tag: "Digital PDF"
+              tag_style: "tag-danger"
+
+    - group_name: "Entertainment Partners"
+      entries:
+        - item_name: "EP Payroll"
+          item_link: "https://www.ep.com/"
+          tags:
+            - tag: "Paper"
+              tag_style: "tag-warning"
+
+    - group_name: "Revolution Entertainment Services"
+      entries:
+        - item_name: "Revolution Payroll"
+          item_link: "https://revolutiones.com/"
+          tags:
+            - tag: "Paper"
+              tag_style: "tag-warning"
+
+    - group_name: "Extreme Reach"
+      entries:
+        - item_name: "Extreme Reach Payroll"
+          item_link: "https://www.xr.global/solutions/production-studios"
+          tags:
+            - tag: "Paper"
+              tag_style: "tag-warning"
+
+- category: Digital Communities
+  groups:
+    - group_name: "Variable"
+      entries:
+        - item_name: "Variable: a filmmaker wellness community"
+          item_link: "https://wearevariable.com/"
+          tags:
+            - tag: "Events"
+              tag_style: "bg-primary"
+            - tag: "Discussions"
+              tag_style: "bg-primary"
+            - tag: "Zooms"
+              tag_style: "bg-primary"
+              
+
+
+    - group_name: "Reddit"
+      entries:
+        - item_name: "r/FilmTvBudgeting"
+          item_link: "https://www.reddit.com/r/FilmTVBudgeting/"
+          tags:
+            - tag: "Social Media"
+              tag_style: "bg-secondary"
+
+    - group_name: "Fishbowl"
+      entries:
+        - item_name: "bowl/Production"
+          item_link: "https://www.fishbowlapp.com/bowl/production"
+          tags:
+            - tag: "Social Media"
+              tag_style: "bg-secondary"
+
+    - group_name: "CoPros"
+      entries:
+        - item_name: "Private e-mail group"
+          item_link: null
+          tags:
+            - tag: "invite-only"
+              tag_style: "tag-danger"
+
+    - group_name: "Art Cube Nation"
+      entries:
+        - item_name: "Art Department Community"
+          item_link: "https://artcubenation.com/"
+          tags:
+            - tag: "Email-Group"
+              tag_style: "bg-secondary"
+            - tag: "Web Platform"
+              tag_style: "bg-info"
+            - tag: "Sourcing"
+              tag_style: "bg-info"
+
+- category: Content
+  groups:
+    - group_name: "Jordan Brady"
+      entries:
+        - item_name: "Respect The Process"
+          item_link: "https://jordanbrady.com/respect-the-process/"
+          tags:
+            - tag: "Podcast"
+              tag_style: "tag-info"
+
+    - group_name: "Josh Parkhill"
+      entries:
+        - item_name: "Frame By Brand"
+          item_link: "https://framebybrand.substack.com/"
+          tags:
+            - tag: "Blog"
+              tag_style: "tag-info"
