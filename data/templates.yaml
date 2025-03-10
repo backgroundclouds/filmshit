@@ -152,8 +152,8 @@
         - label: "custom"
           style: "bg-info"
       meta:
-        File Name: Dayrate Calculator (dayrate_calculator_v0.6.xlsx)
-        File Size: 51 kB
+        File Name: Dayrate Calculator (dayrate_calculator_v0.61.xlsx)
+        File Size: 57 kB
         File Type: XLSX
         MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
         Created On: 2023-01-30
@@ -165,8 +165,8 @@
           ▷Hours
         - Cascade hourly breakdown. 
         - Visual hourly carry over. 
-        - Calculates union specific rules.
-        - Local 600, Local 52, DGA, Non-Union variations, 
+        - Calculates union specific rules. 
+        - Local 600, Local 829, Local 52, DGA, Non-Union variations, 
         - Other union rules easy to be implemented by replicating scheme.
 
     - title: "Smart PO Book"
