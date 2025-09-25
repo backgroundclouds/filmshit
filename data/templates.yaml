@@ -12,7 +12,7 @@
       file_name: "pointzero_bidtemplate.xls"
       tags:
         - label: "Excel"
-          style: "tag-success" 
+          style: "tag-success"
       meta:
         File Name: pointzero_bidtemplate.xls
         File Size: 772 kB
@@ -38,8 +38,8 @@
           License #2000-1169
           © 1996-2000 PointZero Productions.   
           All Rights Reserved.
-          Tech Support: (323) 692-7696        
-    
+          Tech Support: (323) 692-7696
+
     - title: "AICP Bid Form"
       description: ""
       author: "AICP"
@@ -54,7 +54,6 @@
         - tag: "AICP"
           tag_style: "tag-info"
 
-
     # - title: "AICP Bid Form (Google Sheets)"
     #   description: "AICP Bid Form converted to live Google Sheet for shared bidding flows."
     #   author: "Josh Parkhill"
@@ -68,7 +67,7 @@
     #     File Type: "XLS"
     #     File Type Extension: "xls"
     #     MIME Type: "application/vnd.ms-excel"
-    #     Last Modified By: "Joshua Parkhill"       
+    #     Last Modified By: "Joshua Parkhill"
 
 - section: Production
   templates:
@@ -90,7 +89,7 @@
       file_name: "pc_summary_v1.4d.xlsx"
       tags:
         - label: "Excel"
-          style: "tag-success"            
+          style: "tag-success"
       meta:
         File Name: Petty Cash Summary with Descriptions v1.4d 8 pages.xlsx
         File Size: 80 kB
@@ -107,7 +106,6 @@
           Distribution Link: http://www.cornerstoretech.com/forms/
           Creator Email: gareth@cornerstoretech.com
           Last Version: version 1.3b - 6/28/13
-      
 
     - title: "PC Template (Improved)"
       description: "PC Template w/ improved functionality."
@@ -137,18 +135,17 @@
         - Improved backend formulas
         - Password to unlock page tabs is 'homehome'
 
-
 - section: Actualization
   templates:
     - title: "Dayrate Calculator"
       description: "Dayrate to hourly conversion grid."
       author: "J.Parkhill"
       date: "2023"
-      file_path: "/static/files/dayrate_calculator_v0.6.xlsx"
-      file_name: "dayrate_calculator_v0.6.xlsx"
+      file_path: "/static/files/dayrate_calculator_v0.61.xlsx"
+      file_name: "dayrate_calculator_v0.61.xlsx"
       tags:
         - label: "Excel"
-          style: "tag-success"     
+          style: "tag-success"
         - label: "custom"
           style: "bg-info"
       meta:
@@ -158,32 +155,32 @@
         MIME Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
         Created On: 2023-01-30
         Last Modified By: Joshua Parkhill
-        App Version: 16.0300 
+        App Version: 16.0300
       details:
         - INPUTS
           ▷Dayrate
           ▷Hours
-        - Cascade hourly breakdown. 
-        - Visual hourly carry over. 
-        - Calculates union specific rules. 
-        - Local 600, Local 829, Local 52, DGA, Non-Union variations, 
+        - Cascade hourly breakdown.
+        - Visual hourly carry over.
+        - Calculates union specific rules.
+        - Local 600, Local 829, Local 52, DGA, Non-Union variations,
         - Other union rules easy to be implemented by replicating scheme.
 
     - title: "Smart PO Book"
       description: "Generative PO Book. Best used with a HotBudget or TrueBudget workflow."
       author: "J.Parkhill"
       date: "2024"
-      file_path: "/static/files/smartPOBook_v1.xlsm"
-      file_name: "smartPOBook_v1.xlsm"
+      file_path: "/static/files/smartPOBook_v1.1.xlsm"
+      file_name: "smartPOBook_v1.1.xlsm"
       tags:
         - label: "Excel"
           style: "tag-success"
         - label: "macros"
           style: "bg-success"
         - label: "custom"
-          style: "bg-info"         
+          style: "bg-info"
       meta:
-        File Name: Smart PO Book template (smartPOBook_v1.xlsm)
+        File Name: Smart PO Book template (smartPOBook_v1.1.xlsm)
         File Size: 1131 kB
         File Type: XLSM
         MIME Type: application/vnd.ms-excel.sheet.macroEnabled.12
@@ -192,10 +189,10 @@
         App Version: 16.0300
       details:
         - PO generation.
-        - Use specific numeration schemes, without requiring manual duplication
+        - Uses specific numeration schemes, without requiring manual duplication
         - Each PO sheet calculates with PO Log, and job line numbers
         - Copy into your Hotbudget/TrueBudget
         - Exports POs in batch by filename
         - Specific PayID ➝ Date ➝  LineNo 𝙪𝙣𝙞𝙦𝙪𝙚 auto-summing.
         - Fluid tracking—
-
+        - v1.1 - fixed template bug
